@@ -6,9 +6,13 @@ The goal is to turn raw taxi trip records into trusted business-ready tables, op
 
 ## Current Phase
 
-Phase 0: project setup.
+Phase 1: ingestion.
 
-In this phase, the focus is on preparing the repository, local development environment, documentation structure, and cloud analytics plan. No data ingestion has been built yet.
+In this phase, the focus is on documenting the official data sources, downloading selected NYC TLC files, and loading raw tables into BigQuery.
+
+Phase 0 is complete: the repository, local Python environment, Google Cloud project, BigQuery dataset, Git checkpoint, and GitHub remote are ready.
+
+Phase 1 ingestion status: the MVP source files have been downloaded locally and loaded into BigQuery raw tables.
 
 ## Planned Workflow
 
@@ -26,3 +30,13 @@ The first version will use two months of Yellow Taxi trip data plus the official
 
 This keeps the project small enough to learn carefully while still being realistic enough for a professional portfolio.
 
+The selected MVP files are documented in `DATA_SOURCES.md`.
+
+## Current Raw Tables
+
+The MVP raw load created:
+
+- `nyc-taxi-project-502819.nyc_taxi_ops.raw_taxi_trips`
+- `nyc-taxi-project-502819.nyc_taxi_ops.raw_zone_lookup`
+
+The ingestion result is documented in `docs/INGESTION_LOG.md`.

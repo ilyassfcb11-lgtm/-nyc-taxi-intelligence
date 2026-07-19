@@ -66,3 +66,33 @@ These commands open a browser so you can log in to your own Google account.
 
 Codex does not see your password.
 
+## Download MVP Source Data
+
+```bash
+source .venv/bin/activate
+python ingestion/download_data.py
+```
+
+This downloads the selected official NYC TLC files into `data/raw/`.
+
+The downloaded data files are ignored by Git because they are large source files.
+
+## Load Raw Data To BigQuery
+
+```bash
+source .venv/bin/activate
+python ingestion/load_to_bigquery.py
+```
+
+This loads the local files from `data/raw/` into the BigQuery dataset:
+
+```text
+nyc-taxi-project-502819.nyc_taxi_ops
+```
+
+It creates or replaces these raw tables:
+
+```text
+raw_taxi_trips
+raw_zone_lookup
+```

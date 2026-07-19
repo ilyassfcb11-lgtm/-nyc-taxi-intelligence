@@ -8,5 +8,6 @@ data/raw/
 data/processed/
 *.parquet
 *.csv
+*.part
 *.log
-
+tmp/
