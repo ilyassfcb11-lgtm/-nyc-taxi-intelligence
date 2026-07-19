@@ -12,7 +12,7 @@ In this phase, the focus is on documenting the official data sources, downloadin
 
 Phase 0 is complete: the repository, local Python environment, Google Cloud project, BigQuery dataset, Git checkpoint, and GitHub remote are ready.
 
-Phase 1 ingestion status: the MVP source files have been downloaded locally and loaded into BigQuery raw tables.
+Phase 1 ingestion status: the MVP source files have been downloaded locally, loaded into BigQuery raw tables, and validated with basic raw-data checks.
 
 ## Planned Workflow
 
@@ -40,3 +40,5 @@ The MVP raw load created:
 - `nyc-taxi-project-502819.nyc_taxi_ops.raw_zone_lookup`
 
 The ingestion result is documented in `docs/INGESTION_LOG.md`.
+
+The Phase 1 summary is documented in `docs/PHASE_1_SUMMARY.md`.

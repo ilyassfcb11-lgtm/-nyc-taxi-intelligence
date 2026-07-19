@@ -54,3 +54,56 @@ The raw trips table is about 1.1 GB logical size.
 
 This is manageable for the MVP, but repeated full-table SQL scans can add unnecessary BigQuery usage. Future Tableau dashboards should query smaller summary tables instead of this raw table.
 
+## Raw Validation Results
+
+Validation status: complete.
+
+Trip table checks:
+
+| Check | Result |
+| --- | ---: |
+| Total raw trip rows | 7,922,076 |
+| Minimum pickup date | 2001-01-01 |
+| Maximum pickup date | 2026-06-01 |
+| Null pickup datetimes | 0 |
+| Null dropoff datetimes | 0 |
+| Null pickup location IDs | 0 |
+| Null dropoff location IDs | 0 |
+
+Pickup month distribution:
+
+| Pickup month | Trips |
+| --- | ---: |
+| 2001-01 | 1 |
+| 2008-12 | 1 |
+| 2009-01 | 4 |
+| 2026-03 | 7 |
+| 2026-04 | 3,831,239 |
+| 2026-05 | 4,090,823 |
+| 2026-06 | 1 |
+
+Raw trip quality flags:
+
+| Check | Rows |
+| --- | ---: |
+| Non-positive trip distance | 206,546 |
+| Non-positive total amount | 30,950 |
+| Non-positive trip duration | 101,574 |
+
+Zone lookup checks:
+
+| Check | Result |
+| --- | ---: |
+| Zone rows | 265 |
+| Distinct location IDs | 265 |
+| Null location IDs | 0 |
+| Null boroughs | 0 |
+| Null zones | 0 |
+
+## Raw Data Caveats Found
+
+The raw taxi trip table contains a small number of pickup dates outside the intended April and May 2026 MVP window.
+
+The raw taxi trip table also contains records with non-positive distance, amount, or duration.
+
+These are not ingestion failures. They are normal raw-data quality issues that should be handled in Phase 2 cleaning rules.
