@@ -27,6 +27,8 @@ Deliverable:
 
 Target: 3 to 4 days.
 
+Status: started.
+
 Deliverable:
 
 - Cleaned trip tables.
@@ -88,4 +90,3 @@ Target: 4 to 6 weeks, with 6 to 8 weeks acceptable if needed.
 Deliverable:
 
 - A professional portfolio project ready for job applications and interviews.
-

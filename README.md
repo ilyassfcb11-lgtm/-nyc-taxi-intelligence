@@ -6,13 +6,17 @@ The goal is to turn raw taxi trip records into trusted business-ready tables, op
 
 ## Current Phase
 
-Phase 1: ingestion.
+Phase 2: cleaning and KPI preparation.
 
-In this phase, the focus is on documenting the official data sources, downloading selected NYC TLC files, and loading raw tables into BigQuery.
+In this phase, the focus is on cleaning the raw BigQuery tables and preparing the first KPI-ready SQL tables.
 
 Phase 0 is complete: the repository, local Python environment, Google Cloud project, BigQuery dataset, Git checkpoint, and GitHub remote are ready.
 
-Phase 1 ingestion status: the MVP source files have been downloaded locally, loaded into BigQuery raw tables, and validated with basic raw-data checks.
+Phase 1 is complete: the MVP source files have been downloaded locally, loaded into BigQuery raw tables, and validated with basic raw-data checks.
+
+Phase 2 has started with documented cleaning rules in `docs/CLEANING_RULES.md`.
+
+Phase 2 cleaning status: first staging tables have been created in BigQuery.
 
 ## Planned Workflow
 
@@ -42,3 +46,12 @@ The MVP raw load created:
 The ingestion result is documented in `docs/INGESTION_LOG.md`.
 
 The Phase 1 summary is documented in `docs/PHASE_1_SUMMARY.md`.
+
+## Current Staging Tables
+
+The first Phase 2 cleaning step created:
+
+- `nyc-taxi-project-502819.nyc_taxi_ops.stg_trips`
+- `nyc-taxi-project-502819.nyc_taxi_ops.stg_zones`
+
+The cleaning result is documented in `docs/PHASE_2_CLEANING_LOG.md`.
