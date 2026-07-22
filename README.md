@@ -79,5 +79,6 @@ The first Phase 2 KPI mart created:
 - `nyc-taxi-project-502819.nyc_taxi_ops.mart_hourly_demand`
 - `nyc-taxi-project-502819.nyc_taxi_ops.mart_revenue_efficiency`
 - `nyc-taxi-project-502819.nyc_taxi_ops.mart_route_analysis`
+- `nyc-taxi-project-502819.nyc_taxi_ops.mart_operational_kpis`
 
 The mart result is documented in `docs/MART_LOG.md`.

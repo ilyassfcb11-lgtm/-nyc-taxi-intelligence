@@ -449,7 +449,12 @@ Thresholds must be chosen carefully and should be validated with business contex
 Formula:
 
 ```text
-weighted score using demand volume, demand volatility, revenue productivity, and efficiency
+100 * (
+  0.40 * demand_score
+  + 0.25 * utilization_score
+  + 0.20 * efficiency_score
+  + 0.15 * pressure_score
+)
 ```
 
 Definition:
@@ -467,6 +472,8 @@ Connects data analysis to fleet planning and resource allocation.
 Limitations:
 
 This is a decision-support proxy, not an optimization model. It does not include real fleet supply, driver shifts, or wait times.
+
+The MVP implementation normalizes and caps component scores to reduce distortion from small-volume outlier zones.
 
 ### 19. Zone Utilization Proxy
 
@@ -604,4 +611,3 @@ The first KPI marts should be built in this order:
 4. `mart_operational_kpis`
 
 Start with simple, transparent formulas before adding composite scores.
-

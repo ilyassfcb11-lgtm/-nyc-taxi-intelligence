@@ -199,3 +199,78 @@ This suggests the route mart is producing realistic urban mobility patterns.
 The dry run estimated the mart query would process about 304 MB.
 
 This route mart is much smaller than trip-level data and is better suited for route analysis dashboards.
+
+## Run 4: Operational KPI Mart
+
+Status: complete.
+
+SQL file:
+
+```text
+sql/marts/mart_operational_kpis.sql
+```
+
+Output table:
+
+```text
+nyc-taxi-project-502819.nyc_taxi_ops.mart_operational_kpis
+```
+
+## Grain
+
+One row per:
+
+```text
+taxi zone
+```
+
+## Source Tables
+
+- `fact_trips`
+- `dim_zone`
+
+## KPIs Included
+
+| KPI field | Meaning |
+| --- | --- |
+| `zone_utilization_proxy` | Pickup trips per active pickup hour |
+| `peak_load_factor` | Peak hourly pickup trips compared with average hourly pickup trips |
+| `capacity_pressure_proxy` | Same as peak load factor for the MVP |
+| `operational_imbalance_score` | Pickup/dropoff imbalance by zone |
+| `zone_efficiency_score` | Zone revenue efficiency index from revenue per mile and minute |
+| `fleet_allocation_priority_score` | Weighted 0-100 score for fleet attention |
+
+## Fleet Priority Formula
+
+```text
+100 * (
+  0.40 * demand_score
+  + 0.25 * utilization_score
+  + 0.20 * efficiency_score
+  + 0.15 * pressure_score
+)
+```
+
+Component scores are normalized and capped to reduce distortion from low-volume outlier zones.
+
+## Validation Results
+
+| Check | Result |
+| --- | ---: |
+| Zone rows | 265 |
+| Negative pickup rows | 0 |
+| Negative dropoff rows | 0 |
+| Null priority score rows | 0 |
+| Null active imbalance rows | 0 |
+
+## Example Insight From Preview
+
+The highest fleet allocation priority scores were concentrated in major Manhattan zones such as Upper East Side South, Midtown Center, and Upper East Side North, with JFK Airport also ranking highly.
+
+This matches operational intuition: these areas combine high demand, strong utilization, or important movement imbalance.
+
+## Cost Note
+
+The dry run estimated the mart query would process about 425 MB.
+
+This zone-level mart gives Tableau a compact operations-focused table instead of scanning trip-level data repeatedly.
