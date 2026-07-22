@@ -22,6 +22,8 @@ Phase 2 modeling status: first fact and dimension tables have been created in Bi
 
 Phase 2 KPI design status: KPI definitions have been documented in `KPIS.md`.
 
+Phase 2 mart status: the first KPI mart, `mart_hourly_demand`, has been created in BigQuery.
+
 ## Planned Workflow
 
 1. Download official NYC TLC Yellow Taxi data.
@@ -69,3 +71,11 @@ The first Phase 2 core modeling step created:
 - `nyc-taxi-project-502819.nyc_taxi_ops.dim_date`
 
 The core model result is documented in `docs/CORE_MODEL_LOG.md`.
+
+## Current KPI Mart Tables
+
+The first Phase 2 KPI mart created:
+
+- `nyc-taxi-project-502819.nyc_taxi_ops.mart_hourly_demand`
+
+The mart result is documented in `docs/MART_LOG.md`.
