@@ -6,23 +6,25 @@ The goal is to turn raw taxi trip records into trusted business-ready tables, op
 
 ## Current Phase
 
-Phase 2: cleaning and KPI preparation.
+Phase 3: visualization planning.
 
-In this phase, the focus is on cleaning the raw BigQuery tables and preparing the first KPI-ready SQL tables.
+The next phase will use the KPI mart tables to build Tableau dashboards and business recommendations.
 
 Phase 0 is complete: the repository, local Python environment, Google Cloud project, BigQuery dataset, Git checkpoint, and GitHub remote are ready.
 
 Phase 1 is complete: the MVP source files have been downloaded locally, loaded into BigQuery raw tables, and validated with basic raw-data checks.
 
-Phase 2 has started with documented cleaning rules in `docs/CLEANING_RULES.md`.
+Phase 2 is complete: the project now has cleaned staging tables, fact and dimension tables, KPI definitions, and KPI mart tables.
 
-Phase 2 cleaning status: first staging tables have been created in BigQuery.
+Phase 2 cleaning status: staging tables have been created in BigQuery.
 
-Phase 2 modeling status: first fact and dimension tables have been created in BigQuery.
+Phase 2 modeling status: fact and dimension tables have been created in BigQuery.
 
 Phase 2 KPI design status: KPI definitions have been documented in `KPIS.md`.
 
-Phase 2 mart status: the first KPI marts have been created in BigQuery.
+Phase 2 mart status: KPI marts have been created in BigQuery.
+
+The Phase 2 summary is documented in `docs/PHASE_2_SUMMARY.md`.
 
 ## Planned Workflow
 

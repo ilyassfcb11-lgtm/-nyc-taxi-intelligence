@@ -27,17 +27,21 @@ Deliverable:
 
 Target: 3 to 4 days.
 
-Status: started.
+Status: complete.
 
 Deliverable:
 
 - Cleaned trip tables.
-- Initial KPI SQL.
+- Fact and dimension tables.
+- KPI definitions.
 - Cost-conscious summary tables for analysis.
+- Phase 2 summary and interview notes.
 
 ## Phase 3: Visualization
 
 Target: 3 to 4 days.
+
+Status: next.
 
 Deliverable:
 
