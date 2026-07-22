@@ -20,6 +20,8 @@ Phase 2 cleaning status: first staging tables have been created in BigQuery.
 
 Phase 2 modeling status: first fact and dimension tables have been created in BigQuery.
 
+Phase 2 KPI design status: KPI definitions have been documented in `KPIS.md`.
+
 ## Planned Workflow
 
 1. Download official NYC TLC Yellow Taxi data.
