@@ -18,6 +18,8 @@ Phase 2 has started with documented cleaning rules in `docs/CLEANING_RULES.md`.
 
 Phase 2 cleaning status: first staging tables have been created in BigQuery.
 
+Phase 2 modeling status: first fact and dimension tables have been created in BigQuery.
+
 ## Planned Workflow
 
 1. Download official NYC TLC Yellow Taxi data.
@@ -55,3 +57,13 @@ The first Phase 2 cleaning step created:
 - `nyc-taxi-project-502819.nyc_taxi_ops.stg_zones`
 
 The cleaning result is documented in `docs/PHASE_2_CLEANING_LOG.md`.
+
+## Current Core Model Tables
+
+The first Phase 2 core modeling step created:
+
+- `nyc-taxi-project-502819.nyc_taxi_ops.fact_trips`
+- `nyc-taxi-project-502819.nyc_taxi_ops.dim_zone`
+- `nyc-taxi-project-502819.nyc_taxi_ops.dim_date`
+
+The core model result is documented in `docs/CORE_MODEL_LOG.md`.
