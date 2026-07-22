@@ -41,13 +41,14 @@ Deliverable:
 
 Target: 3 to 4 days.
 
-Status: next.
+Status: started.
 
 Deliverable:
 
 - Tableau dashboard pages.
 - First visible portfolio-ready version.
 - Initial business insights and recommendations.
+- Tableau plan and workbook notes.
 
 ## Checkpoint 1
 

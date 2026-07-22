@@ -6,9 +6,9 @@ The goal is to turn raw taxi trip records into trusted business-ready tables, op
 
 ## Current Phase
 
-Phase 3: visualization planning.
+Phase 3: visualization.
 
-The next phase will use the KPI mart tables to build Tableau dashboards and business recommendations.
+The current phase uses the KPI mart tables to build Tableau dashboards and business recommendations.
 
 Phase 0 is complete: the repository, local Python environment, Google Cloud project, BigQuery dataset, Git checkpoint, and GitHub remote are ready.
 
@@ -25,6 +25,8 @@ Phase 2 KPI design status: KPI definitions have been documented in `KPIS.md`.
 Phase 2 mart status: KPI marts have been created in BigQuery.
 
 The Phase 2 summary is documented in `docs/PHASE_2_SUMMARY.md`.
+
+Phase 3 has started with a Tableau dashboard plan in `docs/PHASE_3_TABLEAU_PLAN.md`.
 
 ## Planned Workflow
 
