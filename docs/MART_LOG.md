@@ -133,3 +133,69 @@ This is still an early preview, not a final recommendation.
 The dry run estimated the mart query would process about 364 MB.
 
 This mart is designed for Tableau revenue and efficiency analysis without scanning trip-level fact rows repeatedly.
+
+## Run 3: Route Analysis Mart
+
+Status: complete.
+
+SQL file:
+
+```text
+sql/marts/mart_route_analysis.sql
+```
+
+Output table:
+
+```text
+nyc-taxi-project-502819.nyc_taxi_ops.mart_route_analysis
+```
+
+## Grain
+
+One row per:
+
+```text
+pickup zone + dropoff zone
+```
+
+## Source Tables
+
+- `fact_trips`
+- `dim_zone`
+
+## KPIs Included
+
+| KPI field | Meaning |
+| --- | --- |
+| `trips` | Route trip volume |
+| `total_revenue` | Route total revenue |
+| `revenue_per_trip` | Average route revenue per trip |
+| `revenue_per_mile` | Route revenue per passenger mile |
+| `revenue_per_minute` | Route revenue per passenger minute |
+| `average_duration_per_mile` | Route minutes per passenger mile |
+| `congestion_proxy` | Same as duration per mile |
+| `route_productivity_index` | Route revenue per trip compared with system average |
+| `route_efficiency_score` | Composite score from revenue per mile and revenue per minute |
+| `high_volume_low_efficiency_alert` | Flag for high-volume routes with low efficiency score |
+
+## Validation Results
+
+| Check | Result |
+| --- | ---: |
+| Route rows | 45,409 |
+| Non-positive trip rows | 0 |
+| Null revenue per trip rows | 0 |
+| Null efficiency score rows | 0 |
+| High-volume / low-efficiency route alerts | 250 |
+
+## Example Insight From Preview
+
+The highest-volume routes in the preview were concentrated within Manhattan, especially around Upper East Side and Midtown zones.
+
+This suggests the route mart is producing realistic urban mobility patterns.
+
+## Cost Note
+
+The dry run estimated the mart query would process about 304 MB.
+
+This route mart is much smaller than trip-level data and is better suited for route analysis dashboards.
