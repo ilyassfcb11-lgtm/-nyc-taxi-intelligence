@@ -35,6 +35,10 @@ Current work-in-progress screenshot:
 
 ![Executive Overview work in progress](screenshots/executive_overview_work_in_progress.png)
 
+Polished dashboard render:
+
+![Executive dashboard preview render](screenshots/executive_dashboard_preview_render.png)
+
 Built so far:
 
 - `Top Priority Zones`

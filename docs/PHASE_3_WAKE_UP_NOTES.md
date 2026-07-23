@@ -60,6 +60,7 @@ What was completed instead:
 - small Tableau-ready extracts
 - a detailed Tableau rebuild guide
 - a KPI dictionary
+- rendered dashboard images that can be used as Tableau image assets or portfolio screenshots
 
 The next Tableau step should be done together:
 
@@ -76,6 +77,13 @@ Rebuild the Tableau dashboard using the polished preview and Tableau rebuild gui
 5. Build KPI cards first.
 6. Rebuild the charts one by one using `tableau/TABLEAU_REBUILD_GUIDE.md`.
 7. Save or publish only when the user is ready.
+
+Useful rendered assets:
+
+```text
+tableau/screenshots/executive_dashboard_preview_render.png
+tableau/screenshots/executive_dashboard_preview_render_large.png
+```
 
 ## Interview Talking Point
 

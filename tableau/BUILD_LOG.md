@@ -158,6 +158,17 @@ The open Tableau Public workbook was not published or uploaded.
 
 Tableau Public's dashboard sizing and dashboard-object controls were not reliable through automated UI control, so risky in-app edits were stopped. The next native Tableau build should be done interactively using the polished preview and rebuild guide.
 
+## Rendered Dashboard Asset
+
+A rendered image of the polished dashboard preview was saved for presentation and Tableau image-object use:
+
+```text
+tableau/screenshots/executive_dashboard_preview_render.png
+tableau/screenshots/executive_dashboard_preview_render_large.png
+```
+
+The HTML preview now includes static chart fallback markup, so dashboard sections appear even in renderers that do not run JavaScript.
+
 ## Interview Explanation
 
 If asked what was built in Tableau:
