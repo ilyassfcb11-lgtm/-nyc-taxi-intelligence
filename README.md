@@ -38,6 +38,8 @@ The first business findings are documented in `docs/BUSINESS_INSIGHTS.md`.
 
 The dashboard KPI definitions are documented in `docs/DASHBOARD_KPI_DICTIONARY.md`.
 
+The current Phase 3 handoff notes are documented in `docs/PHASE_3_WAKE_UP_NOTES.md`.
+
 ## Planned Workflow
 
 1. Download official NYC TLC Yellow Taxi data.
