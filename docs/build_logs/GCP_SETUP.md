@@ -2,7 +2,7 @@
 
 This project uses Google Cloud Platform for BigQuery.
 
-Codex does not need your Google password. You log in through your own browser, and the Google Cloud CLI stores the login on your Mac.
+The project does not store Google credentials. Authentication happens through the user's browser or Google Cloud CLI session.
 
 ## Current Goal
 

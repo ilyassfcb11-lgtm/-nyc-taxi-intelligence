@@ -4,7 +4,7 @@ Phase 1 focused on ingestion: moving official NYC TLC source files into BigQuery
 
 ## What We Built
 
-- Documented the official source files in `DATA_SOURCES.md`.
+- Documented the official source files in `docs/reference/DATA_SOURCES.md`.
 - Created an ingestion folder for Phase 1 code and notes.
 - Built `ingestion/download_data.py` to download official TLC files.
 - Built `ingestion/load_to_bigquery.py` to load local raw files into BigQuery.
@@ -77,4 +77,3 @@ I started with only two months of Yellow Taxi data and avoided repeated broad ra
 Phase 1 is on scope.
 
 The MVP now has official raw data in BigQuery. The project should not expand to 12 months yet. The next best step is Phase 2 cleaning using the two-month MVP first.
-

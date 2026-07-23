@@ -58,7 +58,7 @@ dbt test
 
 Reason:
 
-Those commands need Google Cloud credentials inside GitHub Actions. For a beginner-friendly MVP, the safer first step is to validate the project structure without storing cloud credentials.
+Those commands need Google Cloud credentials inside GitHub Actions. For the first public version, the safer approach is to validate the project structure without storing cloud credentials.
 
 ## Future Production Upgrade
 

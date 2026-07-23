@@ -7,7 +7,7 @@ You do not need to memorize these commands. The goal is to understand what each 
 ## Move Into The Project Folder
 
 ```bash
-cd "/Users/ilyass/Documents/Taxi project Codex."
+cd path/to/nyc-taxi-intelligence
 ```
 
 This tells the terminal to work inside this project folder.
@@ -64,7 +64,7 @@ gcloud auth application-default login
 
 These commands open a browser so you can log in to your own Google account.
 
-Codex does not see your password.
+Credentials are handled by Google Cloud in your browser or local CLI session.
 
 ## Download MVP Source Data
 
@@ -100,7 +100,7 @@ raw_zone_lookup
 ## Run The dbt Pipeline
 
 ```bash
-cd "/Users/ilyass/Documents/Taxi project Codex./dbt_project"
+cd dbt_project
 source ../.venv/bin/activate
 dbt run --profiles-dir .
 ```
@@ -114,7 +114,7 @@ raw tables -> staging models -> core models -> mart models
 ## Test The dbt Pipeline
 
 ```bash
-cd "/Users/ilyass/Documents/Taxi project Codex./dbt_project"
+cd dbt_project
 source ../.venv/bin/activate
 dbt test --profiles-dir .
 ```
@@ -124,7 +124,7 @@ This checks saved data quality rules, such as not-null columns, unique IDs, fact
 ## Generate dbt Documentation
 
 ```bash
-cd "/Users/ilyass/Documents/Taxi project Codex./dbt_project"
+cd dbt_project
 source ../.venv/bin/activate
 dbt docs generate --profiles-dir .
 dbt docs serve --profiles-dir . --port 8081 --no-browser

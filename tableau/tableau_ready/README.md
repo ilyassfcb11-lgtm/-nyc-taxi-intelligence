@@ -21,7 +21,7 @@ Use these files in Tableau when rebuilding:
 Why these files exist:
 
 ```text
-The full mart exports are useful, but they can make Tableau slower and harder for a beginner to build. These focused extracts make the final dashboard faster to build and easier to explain.
+The full mart exports are useful, but they can make Tableau slower and harder to work with. These focused extracts make the final dashboard faster to build and easier to explain.
 ```
 
 Interview explanation:

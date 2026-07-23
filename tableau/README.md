@@ -11,7 +11,7 @@ Use it for:
 
 Do not put raw taxi data files here.
 
-The dashboard should use the BigQuery KPI mart tables documented in `docs/PHASE_3_TABLEAU_PLAN.md`.
+The dashboard should use the BigQuery KPI mart tables documented in `docs/build_logs/PHASE_3_TABLEAU_PLAN.md`.
 
 The product dashboard design spec is documented in `tableau/PRODUCT_DASHBOARD_SPEC.md`.
 

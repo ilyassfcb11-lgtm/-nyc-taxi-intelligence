@@ -1,15 +1,23 @@
-# Documentation Folder
+# Documentation
 
-This folder holds supporting project documentation.
+This folder contains supporting documentation for the NYC Taxi Intelligence project.
 
-The main project documents live at the repository root so a recruiter or interviewer can find them quickly.
+## Core Docs
 
-Key documents:
+- [Business insights](BUSINESS_INSIGHTS.md)
+- [CI/CD](CI_CD.md)
+- [Cleaning rules](CLEANING_RULES.md)
+- [Dashboard KPI dictionary](DASHBOARD_KPI_DICTIONARY.md)
+- [Data quality](DATA_QUALITY.md)
 
-- `PHASE_1_SUMMARY.md`: ingestion summary
-- `PHASE_2_SUMMARY.md`: cleaning, modeling, and KPI summary
-- `PHASE_4_DBT_SETUP.md`: dbt setup, run, test, and docs notes
-- `DATA_QUALITY.md`: dbt data quality checks and test results
-- `CI_CD.md`: GitHub Actions validation workflow
-- `BUSINESS_INSIGHTS.md`: current business findings
-- `DASHBOARD_KPI_DICTIONARY.md`: dashboard KPI definitions
+## Reference
+
+- [Command reference](reference/COMMANDS.md)
+- [Data sources](reference/DATA_SOURCES.md)
+- [Project brief](reference/PROJECT_BRIEF.md)
+- [Roadmap](reference/ROADMAP.md)
+- [Manual SQL prototype archive](reference/manual_sql/README.md)
+
+## Build Logs
+
+Detailed implementation notes are archived in [build_logs/](build_logs/). These are useful for project history, but the root README is the main portfolio entry point.

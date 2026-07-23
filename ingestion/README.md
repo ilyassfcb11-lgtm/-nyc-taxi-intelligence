@@ -1,6 +1,6 @@
 # Ingestion
 
-Ingestion means moving source data from its original location into our analytics system.
+Ingestion moves source data from its original location into the analytics system.
 
 For this project, ingestion means:
 
@@ -14,11 +14,11 @@ Local download folder
 BigQuery raw tables
 ```
 
-## Phase 1 Goal
+## Purpose
 
 Load official NYC TLC Yellow Taxi source files into BigQuery as raw tables.
 
-At this stage, we do not clean the data, calculate KPIs, build dashboards, or use dbt.
+This layer does not clean the data, calculate KPIs, build dashboards, or run dbt.
 
 The goal is only to prove that we can reliably move official source data into the cloud warehouse.
 
@@ -30,11 +30,11 @@ The MVP uses:
 - `yellow_tripdata_2026-05.parquet`
 - `taxi_zone_lookup.csv`
 
-These files are documented in `DATA_SOURCES.md`.
+These files are documented in `docs/reference/DATA_SOURCES.md`.
 
-## Planned Raw Tables
+## Raw Tables
 
-The first BigQuery raw tables will be:
+The BigQuery raw tables are:
 
 - `raw_taxi_trips`
 - `raw_zone_lookup`
@@ -53,7 +53,7 @@ A good ingestion process should be:
 - easy to debug
 - clearly separated from analysis logic
 
-## Next Files
+## Scripts
 
 The ingestion files are:
 

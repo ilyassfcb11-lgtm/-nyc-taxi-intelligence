@@ -1,124 +1,190 @@
-# NYC Taxi Operations Intelligence Platform
+# NYC Taxi Intelligence
 
-This project is an end-to-end analytics portfolio project using NYC Yellow Taxi trip data.
+[![Project CI](https://github.com/ilyassfcb11-lgtm/nyc-taxi-intelligence/actions/workflows/ci.yml/badge.svg)](https://github.com/ilyassfcb11-lgtm/nyc-taxi-intelligence/actions/workflows/ci.yml)
 
-The goal is to turn raw taxi trip records into trusted business-ready tables, operational KPIs, Tableau dashboards, and clear recommendations for fleet planning and urban mobility decision-making.
+End-to-end analytics engineering project using NYC Yellow Taxi trip data. The project ingests official TLC data, loads it into BigQuery, transforms it with dbt, validates the modeled data with automated tests, and presents the results through an operations dashboard concept.
 
-## Current Phase
+![Dashboard preview](tableau/screenshots/dashboard_preview_phase3_polish_desktop.png)
 
-Phase 5: testing and data quality.
+## Project Highlights
 
-The current phase documents and strengthens the automated data quality checks around the dbt pipeline.
+- Loaded 7.9M+ raw Yellow Taxi trips into BigQuery.
+- Built a dbt transformation layer with staging, core, and mart models.
+- Created 9 dbt models across clean, dimensional, and dashboard-ready layers.
+- Added 45 passing dbt data quality tests.
+- Designed an executive BI dashboard for fleet allocation, demand, revenue, and route risk.
+- Added GitHub Actions CI to validate Python and dbt project structure on every push.
 
-Phase 0 is complete: the repository, local Python environment, Google Cloud project, BigQuery dataset, Git checkpoint, and GitHub remote are ready.
+## Business Goal
 
-Phase 1 is complete: the MVP source files have been downloaded locally, loaded into BigQuery raw tables, and validated with basic raw-data checks.
+The dashboard is designed for a fleet operations manager who needs to answer:
 
-Phase 2 is complete: the project now has cleaned staging tables, fact and dimension tables, KPI definitions, and KPI mart tables.
+- Where is taxi demand concentrated?
+- Which pickup zones should receive fleet priority?
+- Which zones and routes generate the strongest revenue?
+- Where do high-volume routes show low operational efficiency?
 
-Phase 4 is complete: dbt is connected to BigQuery, all 9 dbt models build successfully, all 39 dbt tests pass, and dbt documentation has been generated.
+## Tech Stack
 
-Phase 5 is complete for the MVP: the dbt test suite now has 45 passing tests covering completeness, uniqueness, relationships, and business rules.
+| Layer | Tools |
+| --- | --- |
+| Ingestion | Python, requests, Google Cloud BigQuery client |
+| Warehouse | Google BigQuery |
+| Transformation | SQL, dbt, dbt-bigquery |
+| Data Quality | dbt generic tests, custom dbt SQL tests |
+| Visualization | Tableau-ready CSV extracts, HTML/CSS/JS dashboard preview |
+| CI/CD | GitHub Actions |
 
-Phase 2 cleaning status: staging tables have been created in BigQuery.
+## Architecture
 
-Phase 2 modeling status: fact and dimension tables have been created in BigQuery.
+```text
+NYC TLC source files
+        |
+        v
+Python ingestion
+        |
+        v
+BigQuery raw tables
+        |
+        v
+dbt staging models
+        |
+        v
+dbt core fact/dimension models
+        |
+        v
+dbt KPI mart models
+        |
+        v
+Dashboard-ready extracts and BI preview
+```
 
-Phase 2 KPI design status: KPI definitions have been documented in `KPIS.md`.
+More detail: [ARCHITECTURE.md](ARCHITECTURE.md)
 
-Phase 2 mart status: KPI marts have been created in BigQuery.
+## Data Model
 
-The Phase 2 summary is documented in `docs/PHASE_2_SUMMARY.md`.
+dbt builds three modeling layers:
 
-Phase 3 has started with a Tableau dashboard plan in `docs/PHASE_3_TABLEAU_PLAN.md`.
+| Layer | Purpose | Example Models |
+| --- | --- | --- |
+| Staging | Clean and standardize raw source tables | `stg_trips`, `stg_zones` |
+| Core | Create reusable fact and dimension tables | `fact_trips`, `dim_zone`, `dim_date` |
+| Marts | Create dashboard-ready KPI tables | `mart_hourly_demand`, `mart_revenue_efficiency`, `mart_route_analysis`, `mart_operational_kpis` |
 
-The current Tableau dashboard build is documented in `tableau/BUILD_LOG.md`.
+## Key Metrics
 
-The polished dashboard design preview is in `dashboard_preview/`.
+Current MVP scope uses April and May 2026 Yellow Taxi records.
 
-The Tableau rebuild instructions are documented in `tableau/TABLEAU_REBUILD_GUIDE.md`.
+| Metric | Value |
+| --- | ---: |
+| Modeled trips | 7.59M |
+| Modeled pickup revenue | $230.2M |
+| Taxi zones monitored | 265 |
+| dbt models | 9 |
+| dbt tests passing | 45 |
+| High-volume low-efficiency route alerts | 250 |
 
-The first business findings are documented in `docs/BUSINESS_INSIGHTS.md`.
+## Data Quality
 
-The dashboard KPI definitions are documented in `docs/DASHBOARD_KPI_DICTIONARY.md`.
+The project uses dbt tests for:
 
-The current Phase 3 handoff notes are documented in `docs/PHASE_3_WAKE_UP_NOTES.md`.
+- required fields not being null
+- unique IDs in dimensions and fact tables
+- relationships between fact trips and taxi zone dimensions
+- custom business rules for positive distance, duration, revenue, and KPI score ranges
 
-Small Tableau-ready dashboard extracts are in `tableau/tableau_ready/`.
+Data quality details: [docs/DATA_QUALITY.md](docs/DATA_QUALITY.md)
 
-The Phase 4 dbt setup is documented in `docs/PHASE_4_DBT_SETUP.md`.
+## Dashboard
 
-The data quality strategy is documented in `docs/DATA_QUALITY.md`.
+The dashboard preview is built as a product-style BI concept before final Tableau publishing. It includes:
 
-The CI/CD validation workflow is documented in `docs/CI_CD.md`.
+- executive KPI cards
+- operating signal ribbon
+- top fleet priority zones
+- borough trip and revenue mix
+- capacity pressure hotspots
+- hourly pickup demand
+- route alerts and top revenue routes
 
-The Tableau dashboard work remains in progress and is documented in the Tableau files.
+Open locally in a browser:
 
-## Planned Workflow
+```text
+dashboard_preview/index.html
+```
 
-1. Download official NYC TLC Yellow Taxi data.
-2. Load raw files into BigQuery.
-3. Clean and transform raw trips into modeled tables.
-4. Design operational KPIs with SQL.
-5. Build Tableau dashboards.
-6. Add dbt models, tests, and documentation.
-7. Add CI/CD and portfolio polish.
+Dashboard design notes: [tableau/PRODUCT_DASHBOARD_SPEC.md](tableau/PRODUCT_DASHBOARD_SPEC.md)
 
-## MVP Scope
+## Repository Structure
 
-The first version will use two months of Yellow Taxi trip data plus the official Taxi Zone Lookup file.
+```text
+.
+├── ingestion/              # Python download and BigQuery load scripts
+├── dbt_project/            # dbt models, tests, sources, and project config
+├── dashboard_preview/      # HTML/CSS/JS dashboard concept
+├── tableau/                # Tableau-ready extracts, screenshots, rebuild guide
+├── docs/                   # Data quality, CI/CD, business insights, build logs
+├── data/                   # Local data folder placeholder; raw files are ignored
+├── .github/workflows/      # GitHub Actions CI
+├── ARCHITECTURE.md
+├── KPIS.md
+└── requirements.txt
+```
 
-This keeps the project small enough to learn carefully while still being realistic enough for a professional portfolio.
+## Run Locally
 
-The selected MVP files are documented in `DATA_SOURCES.md`.
+Install dependencies:
 
-## Current Raw Tables
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
 
-The MVP raw load created:
+Download and load raw data:
 
-- `nyc-taxi-project-502819.nyc_taxi_ops.raw_taxi_trips`
-- `nyc-taxi-project-502819.nyc_taxi_ops.raw_zone_lookup`
+```bash
+python ingestion/download_data.py
+python ingestion/load_to_bigquery.py
+```
 
-The ingestion result is documented in `docs/INGESTION_LOG.md`.
+Run dbt:
 
-The Phase 1 summary is documented in `docs/PHASE_1_SUMMARY.md`.
+```bash
+cd dbt_project
+dbt run --profiles-dir .
+dbt test --profiles-dir .
+dbt docs generate --profiles-dir .
+```
 
-## Current Staging Tables
+The local dbt profile is not committed. Use [dbt_project/profiles.yml.example](dbt_project/profiles.yml.example) as the template.
 
-The first Phase 2 cleaning step created:
+## CI/CD
 
-- `nyc-taxi-project-502819.nyc_taxi_ops.stg_trips`
-- `nyc-taxi-project-502819.nyc_taxi_ops.stg_zones`
+GitHub Actions runs on pushes and pull requests to `main`.
 
-The cleaning result is documented in `docs/PHASE_2_CLEANING_LOG.md`.
+Current CI checks:
 
-## Current Core Model Tables
+- Python dependencies install successfully
+- ingestion scripts compile
+- dbt project parses
+- dbt models, tests, and sources can be listed
 
-The first Phase 2 core modeling step created:
+CI/CD details: [docs/CI_CD.md](docs/CI_CD.md)
 
-- `nyc-taxi-project-502819.nyc_taxi_ops.fact_trips`
-- `nyc-taxi-project-502819.nyc_taxi_ops.dim_zone`
-- `nyc-taxi-project-502819.nyc_taxi_ops.dim_date`
+## Future Improvements
 
-The core model result is documented in `docs/CORE_MODEL_LOG.md`.
+- Parameterize ingestion for a full-year monthly refresh.
+- Add source freshness checks in dbt.
+- Add GitHub Secrets and service account authentication for cloud dbt builds.
+- Automate monthly ingestion with Cloud Scheduler and Cloud Run.
+- Publish the final dashboard to Tableau Public or Looker Studio.
 
-## Current KPI Mart Tables
+## Selected Documentation
 
-The first Phase 2 KPI mart created:
-
-- `nyc-taxi-project-502819.nyc_taxi_ops.mart_hourly_demand`
-- `nyc-taxi-project-502819.nyc_taxi_ops.mart_revenue_efficiency`
-- `nyc-taxi-project-502819.nyc_taxi_ops.mart_route_analysis`
-- `nyc-taxi-project-502819.nyc_taxi_ops.mart_operational_kpis`
-
-The mart result is documented in `docs/MART_LOG.md`.
-
-## Current dbt Tables
-
-The dbt run created separate BigQuery datasets for the transformation layers:
-
-- `nyc-taxi-project-502819.nyc_taxi_ops_staging`
-- `nyc-taxi-project-502819.nyc_taxi_ops_core`
-- `nyc-taxi-project-502819.nyc_taxi_ops_marts`
-
-The dbt pipeline builds 9 models and currently passes 45 data tests.
+- [Architecture](ARCHITECTURE.md)
+- [KPI definitions](KPIS.md)
+- [Data quality](docs/DATA_QUALITY.md)
+- [CI/CD](docs/CI_CD.md)
+- [Business insights](docs/BUSINESS_INSIGHTS.md)
+- [Dashboard specification](tableau/PRODUCT_DASHBOARD_SPEC.md)

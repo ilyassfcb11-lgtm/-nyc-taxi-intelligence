@@ -256,7 +256,7 @@ Next steps:
 Commands:
 
 ```bash
-cd "/Users/ilyass/Documents/Taxi project Codex./dbt_project"
+cd dbt_project
 source ../.venv/bin/activate
 dbt debug --profiles-dir .
 dbt run --profiles-dir .

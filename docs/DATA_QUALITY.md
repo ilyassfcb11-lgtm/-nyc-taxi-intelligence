@@ -90,7 +90,7 @@ These tests protect the business meaning of the dashboard, not just the database
 From the dbt project folder:
 
 ```bash
-cd "/Users/ilyass/Documents/Taxi project Codex./dbt_project"
+cd dbt_project
 source ../.venv/bin/activate
 dbt test --profiles-dir .
 ```

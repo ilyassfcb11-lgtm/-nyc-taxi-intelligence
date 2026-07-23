@@ -1,6 +1,6 @@
 # dbt Project
 
-This folder contains the dbt version of the BigQuery transformation layer.
+This folder contains the production dbt transformation layer for BigQuery.
 
 dbt turns the SQL pipeline into organized models:
 
@@ -13,13 +13,13 @@ raw BigQuery tables
 
 ## What dbt Does Here
 
-dbt will:
+dbt:
 
-- run SQL models in the correct dependency order
-- create or replace BigQuery tables
-- document sources, models, and columns
-- test important assumptions, such as IDs not being null
-- show lineage between raw, staging, core, and mart tables
+- runs SQL models in the correct dependency order
+- creates or replaces BigQuery tables
+- documents sources, models, and columns
+- tests data quality assumptions
+- shows lineage between raw, staging, core, and mart tables
 
 ## Project Layers
 
@@ -41,11 +41,9 @@ models/marts/
 
 Creates dashboard-ready KPI tables.
 
-## Beginner Explanation
+## Dependency Management
 
-Before dbt, each SQL file was run manually.
-
-With dbt, each SQL file is a model. dbt understands which model depends on which other model by using:
+Each SQL file is a dbt model. dbt understands model dependencies through:
 
 ```text
 {{ ref('model_name') }}
@@ -57,7 +55,7 @@ and:
 {{ source('source_name', 'table_name') }}
 ```
 
-So instead of manually remembering the order, dbt builds the dependency graph.
+dbt uses those references to build the dependency graph and run models in the correct order.
 
 ## Current Status
 
@@ -76,6 +74,6 @@ Current result:
 
 ```text
 9 models built
-39 tests passed
+45 tests passed
 dbt docs generated
 ```
