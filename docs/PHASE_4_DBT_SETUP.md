@@ -122,18 +122,36 @@ location_id is unique
 pickup_location_id exists in dim_zone
 ```
 
+## Install Status
+
+dbt has been installed in the project virtual environment.
+
+Installed package:
+
+```text
+dbt-bigquery==1.8.3
+```
+
+Version check result:
+
+```text
+dbt-core: 1.12.0
+dbt-bigquery adapter: 1.8.3
+```
+
+The first install attempt failed because Python could not verify a GitHub certificate while downloading one dbt dependency. Instead of disabling HTTPS verification, Python's official Mac certificate installer was run successfully, then the normal dbt install worked.
+
 ## Current Status
 
-dbt project files have been created, but dbt has not been installed or run yet.
+dbt project files have been created and dbt has been installed, but dbt has not been connected to BigQuery or run yet.
 
 Next steps:
 
-1. Install dbt for BigQuery.
-2. Create a local dbt profile.
-3. Run `dbt debug`.
-4. Run `dbt run`.
-5. Run `dbt test`.
-6. Generate dbt documentation.
+1. Create a local dbt profile.
+2. Run `dbt debug`.
+3. Run `dbt run`.
+4. Run `dbt test`.
+5. Generate dbt documentation.
 
 ## Interview Answer
 

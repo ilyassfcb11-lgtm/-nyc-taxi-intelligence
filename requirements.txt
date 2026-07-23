@@ -6,4 +6,4 @@ db-dtypes
 python-dotenv
 requests
 tqdm
-dbt-bigquery
+dbt-bigquery==1.8.3
