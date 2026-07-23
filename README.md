@@ -28,6 +28,10 @@ The Phase 2 summary is documented in `docs/PHASE_2_SUMMARY.md`.
 
 Phase 3 has started with a Tableau dashboard plan in `docs/PHASE_3_TABLEAU_PLAN.md`.
 
+The current Tableau dashboard build is documented in `tableau/BUILD_LOG.md`.
+
+The first business findings are documented in `docs/BUSINESS_INSIGHTS.md`.
+
 ## Planned Workflow
 
 1. Download official NYC TLC Yellow Taxi data.
