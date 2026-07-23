@@ -1,0 +1,120 @@
+# Tableau Build Log
+
+This file documents the Tableau dashboard build step by step.
+
+## Dashboard Goal
+
+The Tableau workbook should become a portfolio-ready operations dashboard:
+
+```text
+NYC Taxi Operations Command Center
+```
+
+The goal is to help a fleet operations manager understand:
+
+- where demand is concentrated
+- which boroughs produce the most trips and revenue
+- which zones need operational attention
+- where vehicles may need to be prioritized
+
+## Data Used So Far
+
+The first Tableau draft uses:
+
+```text
+tableau/exports/mart_operational_kpis.csv
+```
+
+This CSV came from the BigQuery mart:
+
+```text
+nyc-taxi-project-502819.nyc_taxi_ops.mart_operational_kpis
+```
+
+## Worksheets Built
+
+### Top Priority Zones
+
+Shows the zones with the highest `fleet_allocation_priority_score`.
+
+Why it matters:
+
+```text
+This helps identify where fleet managers should pay attention first.
+```
+
+### Pickup Trips by Borough
+
+Shows total pickup trips by borough.
+
+Why it matters:
+
+```text
+This shows where taxi demand is concentrated geographically.
+```
+
+### Pickup Revenue by Borough
+
+Shows pickup revenue by borough.
+
+Why it matters:
+
+```text
+This separates revenue contribution from trip volume.
+```
+
+### Operational Imbalance by Zone
+
+Shows zones with high pickup/dropoff imbalance.
+
+Why it matters:
+
+```text
+This helps identify zones where supply and demand may not be balanced.
+```
+
+### KPI Total Trips
+
+Shows total cleaned trips in the modeled dashboard layer.
+
+Why it matters:
+
+```text
+This gives the viewer quick context for the size of the analysis.
+```
+
+## Dashboard Built
+
+The first dashboard tab is:
+
+```text
+Executive Overview
+```
+
+Current screenshot:
+
+```text
+tableau/screenshots/executive_overview_work_in_progress.png
+```
+
+## What Is Not Finished Yet
+
+This is not final yet.
+
+Next Tableau tasks:
+
+- Add KPI cards for total revenue, zones monitored, and top priority score.
+- Improve spacing so the dashboard feels like a product interface.
+- Add filters for borough and service zone.
+- Build the Demand Patterns page.
+- Build the Revenue and Efficiency page.
+- Build the Route Performance page.
+- Publish only after the dashboard is polished and ready to be public.
+
+## Interview Explanation
+
+If asked what was built in Tableau:
+
+```text
+I built the visualization layer on top of KPI mart tables exported from BigQuery. The first dashboard is an executive operations overview with priority zones, borough-level demand and revenue, operational imbalance, and a total-trip KPI card. The dashboard is designed to support fleet allocation decisions rather than simply display raw charts.
+```

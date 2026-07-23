@@ -166,18 +166,30 @@ I designed the visualization layer as an operations command center. The dashboar
 
 ## Current Build Status
 
-Started:
+Built in Tableau:
 
 - `Top Priority Zones`
 - `Pickup Trips by Borough`
 - `Pickup Revenue by Borough`
+- `Operational Imbalance by Zone`
+- `KPI Total Trips`
 - `Executive Overview`
+- Dashboard title: `NYC Taxi Operations Command Center`
+
+Saved project artifact:
+
+- `tableau/screenshots/executive_overview_work_in_progress.png`
 
 Still needed:
 
-- KPI card worksheets.
-- Cleaner dashboard title/header.
+- KPI cards for total revenue, zones monitored, and top priority score.
 - Borough and service zone filters.
-- Better formatting and colors.
+- Better product-style formatting, spacing, and colors.
 - Demand, revenue, and route pages.
 - Final published Tableau Public link or dashboard screenshots.
+
+Current status:
+
+```text
+The first dashboard is a working draft. It proves the mart data is connected and the core operational views exist. The next Tableau work should focus on layout polish and adding the remaining dashboard pages.
+```
