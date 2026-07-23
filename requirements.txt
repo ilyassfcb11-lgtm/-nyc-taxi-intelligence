@@ -6,3 +6,4 @@ db-dtypes
 python-dotenv
 requests
 tqdm
+dbt-bigquery

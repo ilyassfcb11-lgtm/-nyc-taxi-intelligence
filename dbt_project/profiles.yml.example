@@ -1,0 +1,11 @@
+nyc_taxi_intelligence:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: oauth
+      project: nyc-taxi-project-502819
+      dataset: nyc_taxi_ops
+      threads: 4
+      location: US
+

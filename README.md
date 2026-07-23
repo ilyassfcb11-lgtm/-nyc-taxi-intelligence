@@ -16,6 +16,8 @@ Phase 1 is complete: the MVP source files have been downloaded locally, loaded i
 
 Phase 2 is complete: the project now has cleaned staging tables, fact and dimension tables, KPI definitions, and KPI mart tables.
 
+Phase 4 has started: the dbt project structure and initial dbt models have been created.
+
 Phase 2 cleaning status: staging tables have been created in BigQuery.
 
 Phase 2 modeling status: fact and dimension tables have been created in BigQuery.
@@ -41,6 +43,8 @@ The dashboard KPI definitions are documented in `docs/DASHBOARD_KPI_DICTIONARY.m
 The current Phase 3 handoff notes are documented in `docs/PHASE_3_WAKE_UP_NOTES.md`.
 
 Small Tableau-ready dashboard extracts are in `tableau/tableau_ready/`.
+
+The Phase 4 dbt setup is documented in `docs/PHASE_4_DBT_SETUP.md`.
 
 ## Planned Workflow
 

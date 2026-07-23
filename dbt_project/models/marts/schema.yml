@@ -1,0 +1,64 @@
+version: 2
+
+models:
+  - name: mart_hourly_demand
+    description: Hourly demand mart with one row per pickup date, pickup hour, and pickup zone.
+    columns:
+      - name: pickup_date
+        tests:
+          - not_null
+      - name: pickup_hour
+        tests:
+          - not_null
+      - name: pickup_location_id
+        tests:
+          - not_null
+      - name: trips_per_hour
+        tests:
+          - not_null
+
+  - name: mart_revenue_efficiency
+    description: Revenue and efficiency mart with one row per pickup date, pickup hour, and pickup zone.
+    columns:
+      - name: pickup_date
+        tests:
+          - not_null
+      - name: pickup_hour
+        tests:
+          - not_null
+      - name: pickup_location_id
+        tests:
+          - not_null
+      - name: total_revenue
+        tests:
+          - not_null
+
+  - name: mart_route_analysis
+    description: Route performance mart with one row per pickup and dropoff zone pair.
+    columns:
+      - name: pickup_location_id
+        tests:
+          - not_null
+      - name: dropoff_location_id
+        tests:
+          - not_null
+      - name: trips
+        tests:
+          - not_null
+
+  - name: mart_operational_kpis
+    description: Zone-level operational KPI mart for fleet allocation and stakeholder dashboards.
+    columns:
+      - name: location_id
+        tests:
+          - not_null
+          - unique
+      - name: borough
+        tests:
+          - not_null
+      - name: zone_name
+        tests:
+          - not_null
+      - name: fleet_allocation_priority_score
+        description: Composite score for prioritizing fleet allocation by zone.
+

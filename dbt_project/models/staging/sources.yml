@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: nyc_taxi_raw
+    database: nyc-taxi-project-502819
+    schema: nyc_taxi_ops
+    description: Raw NYC TLC taxi trip and zone lookup tables loaded into BigQuery.
+    tables:
+      - name: raw_taxi_trips
+        description: Raw Yellow Taxi trip records loaded from NYC TLC parquet files.
+      - name: raw_zone_lookup
+        description: Raw TLC taxi zone lookup table.
+

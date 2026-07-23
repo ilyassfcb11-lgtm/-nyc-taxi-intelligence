@@ -1,0 +1,56 @@
+version: 2
+
+models:
+  - name: fact_trips
+    description: Core fact table with one row per cleaned taxi trip.
+    columns:
+      - name: trip_id
+        description: Deterministic trip identifier generated from trip attributes.
+        tests:
+          - not_null
+          - unique
+      - name: pickup_date
+        description: Trip pickup date.
+        tests:
+          - not_null
+      - name: pickup_location_id
+        description: Pickup zone foreign key to dim_zone.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_zone')
+              field: location_id
+      - name: dropoff_location_id
+        description: Dropoff zone foreign key to dim_zone.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_zone')
+              field: location_id
+      - name: total_amount
+        description: Total trip amount.
+        tests:
+          - not_null
+
+  - name: dim_zone
+    description: Taxi zone dimension with borough and service zone metadata.
+    columns:
+      - name: location_id
+        description: TLC taxi zone location ID.
+        tests:
+          - not_null
+          - unique
+      - name: borough
+        description: Borough or area.
+        tests:
+          - not_null
+
+  - name: dim_date
+    description: Date dimension for the MVP analysis window.
+    columns:
+      - name: calendar_date
+        description: Calendar date.
+        tests:
+          - not_null
+          - unique
+
