@@ -86,6 +86,8 @@ Deliverable:
 
 Target: 2 to 4 days.
 
+Status: started.
+
 Deliverable:
 
 - GitHub Actions workflow.

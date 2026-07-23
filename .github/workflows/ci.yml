@@ -1,0 +1,58 @@
+name: Project CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  validate:
+    name: Validate Python and dbt project
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Check Python syntax
+        run: |
+          python -m py_compile ingestion/download_data.py ingestion/load_to_bigquery.py
+
+      - name: Create CI dbt profile
+        run: |
+          mkdir -p dbt_project/ci_profiles
+          cat > dbt_project/ci_profiles/profiles.yml <<'YAML'
+          nyc_taxi_intelligence:
+            target: ci
+            outputs:
+              ci:
+                type: bigquery
+                method: oauth
+                project: nyc-taxi-project-502819
+                dataset: nyc_taxi_ops
+                threads: 4
+                location: US
+          YAML
+
+      - name: Parse dbt project
+        working-directory: dbt_project
+        run: |
+          dbt parse --profiles-dir ci_profiles
+
+      - name: List dbt resources
+        working-directory: dbt_project
+        run: |
+          dbt ls --profiles-dir ci_profiles

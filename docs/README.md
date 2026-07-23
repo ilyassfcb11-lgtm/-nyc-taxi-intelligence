@@ -10,5 +10,6 @@ Key documents:
 - `PHASE_2_SUMMARY.md`: cleaning, modeling, and KPI summary
 - `PHASE_4_DBT_SETUP.md`: dbt setup, run, test, and docs notes
 - `DATA_QUALITY.md`: dbt data quality checks and test results
+- `CI_CD.md`: GitHub Actions validation workflow
 - `BUSINESS_INSIGHTS.md`: current business findings
 - `DASHBOARD_KPI_DICTIONARY.md`: dashboard KPI definitions

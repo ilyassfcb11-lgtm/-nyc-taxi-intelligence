@@ -137,3 +137,15 @@ After running the serve command, open:
 ```text
 http://localhost:8081
 ```
+
+## CI/CD Check
+
+The project has a GitHub Actions workflow in:
+
+```text
+.github/workflows/ci.yml
+```
+
+You do not run this manually most of the time.
+
+It runs automatically when code is pushed to GitHub.

@@ -50,6 +50,8 @@ The Phase 4 dbt setup is documented in `docs/PHASE_4_DBT_SETUP.md`.
 
 The data quality strategy is documented in `docs/DATA_QUALITY.md`.
 
+The CI/CD validation workflow is documented in `docs/CI_CD.md`.
+
 The Tableau dashboard work remains in progress and is documented in the Tableau files.
 
 ## Planned Workflow
