@@ -8,14 +8,17 @@ Purpose:
 Create a clean product-dashboard target before final Tableau formatting.
 ```
 
-The current Tableau workbook proves the data works, but Tableau's default chart styles are plain. This preview shows the intended final design direction:
+The current Tableau workbook proves the data works, but Tableau's default chart styles are plain. This preview shows the intended final design direction for a stakeholder-ready BI dashboard:
 
-- KPI cards at the top
+- executive KPI cards at the top
+- stakeholder decision summary
 - ranked operational priority zones
-- borough demand and revenue comparison
+- borough trip and revenue portfolio comparison
+- capacity pressure hotspots
 - hourly demand pattern
-- route alerts
-- concise business insights
+- revenue efficiency and yield views
+- high-volume low-efficiency route alerts
+- concise operational recommendations
 
 Open:
 
@@ -29,3 +32,14 @@ The numbers come from the BigQuery mart exports in:
 tableau/exports/
 ```
 
+## Design Purpose
+
+The preview is intentionally more polished than the first Tableau draft.
+
+It should help us rebuild Tableau with a clearer target:
+
+```text
+An employer should understand the business value in 10 seconds.
+A stakeholder should understand what action to take next.
+An interviewer should see the full analytics pipeline behind the dashboard.
+```

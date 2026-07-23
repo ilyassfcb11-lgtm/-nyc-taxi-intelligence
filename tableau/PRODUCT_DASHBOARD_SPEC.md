@@ -52,6 +52,9 @@ Header: NYC Taxi Operations Command Center
 KPI cards:
   Total Trips
   Total Revenue
+  Manhattan Trip Share
+  Busiest Pickup Hour
+  Route Alerts
   Zones Monitored
   Top Priority Score
 
@@ -59,8 +62,13 @@ Main visual:
   Top Priority Zones
 
 Supporting visuals:
+  Stakeholder decision summary
   Pickup Trips by Borough
   Pickup Revenue by Borough
+  Pressure hotspots
+  Busiest pickup hours
+  Top revenue zones
+  High-volume low-efficiency route alerts
 
 Filters:
   Borough
@@ -192,5 +200,5 @@ Still needed:
 Current status:
 
 ```text
-The first dashboard is a working draft. It proves the mart data is connected and the core operational views exist. The next Tableau work should focus on layout polish and adding the remaining dashboard pages.
+The first Tableau dashboard is a working draft. The HTML preview now defines the stronger product-dashboard target: executive KPIs, stakeholder decisions, demand timing, revenue efficiency, route risk, and fleet allocation priority. The next Tableau work should rebuild the Tableau layout to match this target as closely as Tableau allows.
 ```

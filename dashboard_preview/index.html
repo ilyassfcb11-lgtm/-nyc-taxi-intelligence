@@ -19,8 +19,9 @@
 
         <nav class="nav-list">
           <a class="active" href="#overview">Overview</a>
-          <a href="#priority">Priority</a>
+          <a href="#fleet">Fleet Priority</a>
           <a href="#demand">Demand</a>
+          <a href="#revenue">Revenue</a>
           <a href="#routes">Routes</a>
         </nav>
 
@@ -34,7 +35,7 @@
             <option value="Bronx">Bronx</option>
           </select>
 
-          <label for="sortMode">Rank by</label>
+          <label for="sortMode">Rank priority by</label>
           <select id="sortMode">
             <option value="priority">Priority score</option>
             <option value="trips">Pickup trips</option>
@@ -44,14 +45,18 @@
       </aside>
 
       <main class="content" id="overview">
-        <header class="topbar">
+        <header class="hero">
           <div>
             <p class="eyebrow">April and May 2026 modeled trips</p>
             <h2>NYC Taxi Operations Command Center</h2>
+            <p class="hero-copy">
+              Executive view for fleet allocation, demand planning, revenue efficiency,
+              and route risk using BigQuery KPI marts.
+            </p>
           </div>
-          <div class="status-pill">
-            <span></span>
-            BigQuery marts connected
+          <div class="hero-status">
+            <span class="live-dot"></span>
+            BigQuery marts exported
           </div>
         </header>
 
@@ -66,20 +71,45 @@
             <strong>$230.2M</strong>
             <small>Modeled pickup revenue</small>
           </article>
+          <article class="kpi-card accent-teal">
+            <span>Manhattan Share</span>
+            <strong>86.5%</strong>
+            <small>Pickup trip concentration</small>
+          </article>
           <article class="kpi-card accent-gold">
+            <span>Busiest Hour</span>
+            <strong>18:00</strong>
+            <small>491,225 pickups</small>
+          </article>
+          <article class="kpi-card accent-red">
+            <span>Route Alerts</span>
+            <strong>250</strong>
+            <small>High-volume low-efficiency routes</small>
+          </article>
+          <article class="kpi-card accent-purple">
             <span>Zones Monitored</span>
             <strong>265</strong>
             <small>TLC taxi zones</small>
           </article>
-          <article class="kpi-card accent-red">
-            <span>Top Priority Score</span>
-            <strong>78.5</strong>
-            <small>Upper East Side South</small>
+        </section>
+
+        <section class="decision-strip" aria-label="Stakeholder decisions">
+          <article>
+            <span>Fleet decision</span>
+            <strong>Keep Manhattan coverage high during late afternoon and evening demand peaks.</strong>
+          </article>
+          <article>
+            <span>Revenue decision</span>
+            <strong>Protect JFK and LaGuardia availability because airport zones outperform on revenue per trip.</strong>
+          </article>
+          <article>
+            <span>Operations decision</span>
+            <strong>Review flagged short urban routes where high volume does not convert into strong efficiency.</strong>
           </article>
         </section>
 
         <section class="dashboard-grid">
-          <article class="panel panel-large" id="priority">
+          <article class="panel panel-large" id="fleet">
             <div class="panel-header">
               <div>
                 <p class="eyebrow">Fleet allocation</p>
@@ -93,32 +123,53 @@
           <article class="panel">
             <div class="panel-header">
               <div>
-                <p class="eyebrow">Geography</p>
-                <h3>Trips by Borough</h3>
+                <p class="eyebrow">Borough portfolio</p>
+                <h3>Trips vs Revenue Share</h3>
               </div>
             </div>
-            <div id="tripBars" class="bar-list compact"></div>
+            <div id="boroughMix" class="mix-list"></div>
           </article>
 
           <article class="panel">
             <div class="panel-header">
               <div>
-                <p class="eyebrow">Revenue mix</p>
-                <h3>Revenue by Borough</h3>
+                <p class="eyebrow">Capacity pressure</p>
+                <h3>Pressure Hotspots</h3>
               </div>
+              <span class="panel-tag warning">Watchlist</span>
             </div>
-            <div id="revenueBars" class="bar-list compact"></div>
+            <div id="pressureList" class="rank-list"></div>
           </article>
 
           <article class="panel panel-wide" id="demand">
             <div class="panel-header">
               <div>
-                <p class="eyebrow">Demand pattern</p>
-                <h3>Busiest Pickup Hours</h3>
+                <p class="eyebrow">Demand timing</p>
+                <h3>Pickup Volume by Hour</h3>
               </div>
-              <span class="panel-tag">Late afternoon peak</span>
+              <span class="panel-tag">Evening peak</span>
             </div>
-            <div id="hourlyBars" class="hour-grid"></div>
+            <div id="hourlyBars" class="hour-chart"></div>
+          </article>
+
+          <article class="panel" id="revenue">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">Revenue efficiency</p>
+                <h3>Top Revenue Zones</h3>
+              </div>
+            </div>
+            <div id="revenueZones" class="rank-list"></div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">Yield</p>
+                <h3>Highest Revenue Per Trip</h3>
+              </div>
+            </div>
+            <div id="yieldZones" class="rank-list"></div>
           </article>
 
           <article class="panel panel-wide" id="routes">
@@ -127,22 +178,32 @@
                 <p class="eyebrow">Route operations</p>
                 <h3>High-Volume Low-Efficiency Alerts</h3>
               </div>
-              <span class="panel-tag">250 routes flagged</span>
+              <span class="panel-tag danger">250 routes flagged</span>
             </div>
             <div id="routeAlerts" class="route-list"></div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">Best routes</p>
+                <h3>Top Revenue Routes</h3>
+              </div>
+            </div>
+            <div id="topRoutes" class="rank-list"></div>
           </article>
 
           <article class="panel insight-panel">
             <div class="panel-header">
               <div>
-                <p class="eyebrow">Recommendation</p>
-                <h3>What To Do Next</h3>
+                <p class="eyebrow">Stakeholder summary</p>
+                <h3>Recommended Action</h3>
               </div>
             </div>
             <p>
-              Prioritize Manhattan coverage for volume, protect airport capacity for revenue,
-              and review flagged short urban routes where high demand does not translate into
-              strong efficiency.
+              Allocate vehicles from a blended view of demand, revenue, and pressure.
+              Manhattan needs constant coverage for trip volume, while airport zones need
+              protected capacity because each trip carries higher revenue.
             </p>
           </article>
         </section>

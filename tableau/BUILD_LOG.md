@@ -111,6 +111,27 @@ Next Tableau tasks:
 - Build the Route Performance page.
 - Publish only after the dashboard is polished and ready to be public.
 
+## Dashboard Design Target
+
+The polished design target is now in:
+
+```text
+dashboard_preview/
+```
+
+This preview is more complete than the first Tableau draft. It includes:
+
+- six executive KPI cards
+- stakeholder decision summary
+- fleet priority ranking
+- borough trip and revenue mix
+- capacity pressure hotspots
+- hourly demand curve
+- revenue efficiency views
+- route alert list
+
+The next Tableau build should use this preview as the visual and business blueprint.
+
 ## Interview Explanation
 
 If asked what was built in Tableau:
