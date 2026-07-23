@@ -1,0 +1,13 @@
+pickup_borough,pickup_zone_name,dropoff_borough,dropoff_zone_name,route_name,trips,total_revenue,route_efficiency_score,high_volume_low_efficiency_alert
+Manhattan,Penn Station/Madison Sq West,Manhattan,Times Sq/Theatre District,Penn Station/Madison Sq West -> Times Sq/Theatre District,13309,290390.56,0.6503,true
+Manhattan,Lenox Hill East,Manhattan,Upper East Side North,Lenox Hill East -> Upper East Side North,12683,229206.98,0.6767,true
+Manhattan,Penn Station/Madison Sq West,Manhattan,Union Sq,Penn Station/Madison Sq West -> Union Sq,10278,173253.12,0.8078,true
+Manhattan,Yorkville East,Manhattan,Upper East Side South,Yorkville East -> Upper East Side South,9247,177352.12,0.7065,true
+Manhattan,Upper East Side South,Manhattan,Times Sq/Theatre District,Upper East Side South -> Times Sq/Theatre District,6843,165415.4,0.7199,true
+Manhattan,Murray Hill,Manhattan,Penn Station/Madison Sq West,Murray Hill -> Penn Station/Madison Sq West,6368,127927.86,0.5691,true
+Manhattan,Upper West Side South,Manhattan,Times Sq/Theatre District,Upper West Side South -> Times Sq/Theatre District,5674,137499.76,0.602,true
+Manhattan,Greenwich Village North,Manhattan,East Village,Greenwich Village North -> East Village,5618,95331.31,0.8084,true
+Manhattan,Upper East Side North,Manhattan,Times Sq/Theatre District,Upper East Side North -> Times Sq/Theatre District,5526,162964.6,0.6613,true
+Manhattan,Upper West Side South,Manhattan,Morningside Heights,Upper West Side South -> Morningside Heights,5354,108436.88,0.7225,true
+Manhattan,Lincoln Square East,Manhattan,Central Park,Lincoln Square East -> Central Park,4360,80093.64,0.7377,true
+Manhattan,East Chelsea,Manhattan,Meatpacking/West Village West,East Chelsea -> Meatpacking/West Village West,4214,74743.42,0.7184,true

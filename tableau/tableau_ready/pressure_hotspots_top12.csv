@@ -1,0 +1,13 @@
+borough,zone_name,service_zone,pickup_trips,capacity_pressure_proxy,operational_imbalance_score
+Brooklyn,Brooklyn Navy Yard,Boro Zone,1365,18.93,0.0438
+Queens,Woodside,Boro Zone,3632,15.81,0.2152
+Queens,Maspeth,Boro Zone,3249,13.57,0.1449
+Queens,Flushing Meadows-Corona Park,Boro Zone,1806,13.01,0.6773
+Brooklyn,Greenpoint,Boro Zone,11096,12.48,0.3495
+Queens,North Corona,Boro Zone,962,11.65,0.3406
+Bronx,Mott Haven/Port Morris,Boro Zone,4868,11.32,0.1972
+Brooklyn,Red Hook,Boro Zone,2807,10.99,0.2067
+Queens,Sunnyside,Boro Zone,11951,10.47,0.0757
+Bronx,Hunts Point,Boro Zone,1391,10.24,0.1757
+Brooklyn,Sunset Park West,Boro Zone,3524,10.14,0.3091
+Queens,Elmhurst,Boro Zone,3848,9.64,0.3162

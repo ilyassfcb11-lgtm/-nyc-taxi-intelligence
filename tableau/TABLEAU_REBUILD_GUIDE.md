@@ -41,7 +41,15 @@ The current Tableau draft looks cramped because it uses a small phone-sized rang
 
 ## Tableau Data Sources
 
-Use the CSV exports in:
+For the easiest rebuild, use the small Tableau-ready extracts in:
+
+```text
+tableau/tableau_ready/
+```
+
+These files are already reduced to the exact grain needed for each dashboard section.
+
+The full mart exports are still available in:
 
 ```text
 tableau/exports/
@@ -51,12 +59,15 @@ Recommended sources:
 
 | Dashboard Section | File |
 | --- | --- |
-| KPI cards | `executive_kpi_cards.csv` |
-| Top priority zones | `top_priority_zones.csv` |
-| Borough mix | `borough_summary.csv` |
-| Hourly demand | `mart_hourly_demand.csv` |
-| Revenue efficiency | `mart_revenue_efficiency.csv` |
-| Route analysis | `mart_route_analysis.csv` |
+| KPI cards | `tableau_ready/kpi_cards.csv` |
+| Top priority zones | `tableau_ready/top_priority_zones_top12.csv` |
+| Borough mix | `tableau_ready/borough_trip_revenue_mix.csv` |
+| Hourly demand | `tableau_ready/hourly_demand_summary.csv` |
+| Pressure hotspots | `tableau_ready/pressure_hotspots_top12.csv` |
+| Revenue zones | `tableau_ready/top_revenue_zones_top12.csv` |
+| Yield zones | `tableau_ready/highest_revenue_per_trip_zones_top12.csv` |
+| Route alerts | `tableau_ready/route_alerts_top12.csv` |
+| Top revenue routes | `tableau_ready/top_revenue_routes_top12.csv` |
 
 ## Dashboard Layout
 

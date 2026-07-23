@@ -1,0 +1,13 @@
+borough,zone_name,service_zone,pickup_trips,pickup_revenue,zone_utilization_proxy,capacity_pressure_proxy,operational_imbalance_score,fleet_allocation_priority_score
+Manhattan,Upper East Side South,Yellow Zone,367459,8177216.11,251.68,2.84,0.0536,78.5
+Manhattan,Midtown Center,Yellow Zone,313407,8684598.81,214.08,3.75,0.0904,74.21
+Manhattan,Upper East Side North,Yellow Zone,323917,7367402.92,223.85,2.98,0.0164,73.7
+Queens,JFK Airport,Airports,285717,2.294355966E7,195.16,2.84,0.6498,66.78
+Manhattan,Midtown East,Yellow Zone,230123,6089368.55,157.19,3.54,0.0806,64.61
+Manhattan,Times Sq/Theatre District,Yellow Zone,217378,6689254.79,148.48,4.57,0.031,63.83
+Manhattan,East Village,Yellow Zone,196852,5064090.58,134.46,7.02,0.0805,62.15
+Manhattan,Lincoln Square East,Yellow Zone,228102,5494122.36,156.13,3.8,0.0657,61.85
+Manhattan,Penn Station/Madison Sq West,Yellow Zone,223401,6086013.98,152.6,3.41,0.2059,61.81
+Manhattan,Union Sq,Yellow Zone,191412,4893328.85,130.75,3.41,0.0524,60.47
+Queens,LaGuardia Airport,Airports,199374,1.429848428E7,152.08,3.32,0.4807,59.62
+Manhattan,Upper West Side South,Yellow Zone,200029,4777502.96,137.1,2.79,7.0E-4,58.15

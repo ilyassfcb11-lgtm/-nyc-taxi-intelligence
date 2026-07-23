@@ -1,0 +1,13 @@
+pickup_borough,pickup_zone_name,dropoff_borough,dropoff_zone_name,route_name,trips,total_revenue,route_efficiency_score,high_volume_low_efficiency_alert
+Queens,JFK Airport,N/A,Outside of NYC,JFK Airport -> Outside of NYC,13247,1643357.45,1.4406,false
+Queens,JFK Airport,Manhattan,Times Sq/Theatre District,JFK Airport -> Times Sq/Theatre District,12099,1175390.02,0.946,false
+Queens,LaGuardia Airport,Manhattan,Times Sq/Theatre District,LaGuardia Airport -> Times Sq/Theatre District,11374,944988.14,1.2707,false
+Manhattan,Upper East Side South,Manhattan,Upper East Side North,Upper East Side South -> Upper East Side North,55358,895086.12,1.9796,false
+Manhattan,Upper East Side North,Manhattan,Upper East Side South,Upper East Side North -> Upper East Side South,46947,785872.74,2.0147,false
+Queens,LaGuardia Airport,Manhattan,Midtown Center,LaGuardia Airport -> Midtown Center,7852,622942.91,1.2884,false
+Queens,JFK Airport,Manhattan,Midtown South,JFK Airport -> Midtown South,6247,614014.64,1.0737,false
+Queens,JFK Airport,Manhattan,Midtown Center,JFK Airport -> Midtown Center,5661,552991.17,1.0044,false
+Manhattan,Times Sq/Theatre District,Queens,LaGuardia Airport,Times Sq/Theatre District -> LaGuardia Airport,6620,532845.16,1.2892,false
+Queens,JFK Airport,Manhattan,Clinton East,JFK Airport -> Clinton East,5509,532769.81,0.9442,false
+Manhattan,Upper East Side South,Manhattan,Upper East Side South,Upper East Side South -> Upper East Side South,36481,528502.79,2.7008,false
+Queens,JFK Airport,Manhattan,Midtown North,JFK Airport -> Midtown North,5255,500758.72,0.9421,false

@@ -1,0 +1,13 @@
+pickup_borough,pickup_zone_name,trips,total_revenue,revenue_per_trip,revenue_per_mile,revenue_per_minute
+Queens,JFK Airport,285717,22943559.66,80.3,5.32,1.87
+Queens,LaGuardia Airport,199374,14298484.28,71.72,7.46,2.05
+Queens,East Elmhurst,16749,1141717.34,68.17,7.32,2.0
+Queens,Sunnyside,11951,533393.41,44.63,7.9,1.75
+Queens,Long Island City/Hunters Point,14010,575865.33,41.1,7.79,1.74
+Brooklyn,Williamsburg (South Side),11800,422063.04,35.77,7.63,1.58
+Brooklyn,Bushwick South,11782,420567.34,35.7,2.23,1.27
+Manhattan,Financial District South,26879,958374.98,35.66,7.03,1.64
+Manhattan,Battery Park City,44941,1589636.72,35.37,6.88,1.79
+Brooklyn,Williamsburg (North Side),18016,633803.51,35.18,2.75,1.65
+Manhattan,World Trade Center,32858,1154196.04,35.13,4.96,1.59
+Brooklyn,Greenpoint,11096,389277.99,35.08,7.57,1.57

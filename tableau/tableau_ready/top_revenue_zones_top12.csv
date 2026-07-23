@@ -1,0 +1,13 @@
+pickup_borough,pickup_zone_name,trips,total_revenue,revenue_per_trip,revenue_per_mile,revenue_per_minute
+Queens,JFK Airport,285717,22943559.66,80.3,5.32,1.87
+Queens,LaGuardia Airport,199374,14298484.28,71.72,7.46,2.05
+Manhattan,Midtown Center,313407,8684598.81,27.71,11.85,1.64
+Manhattan,Upper East Side South,367459,8177216.11,22.25,10.76,1.67
+Manhattan,Upper East Side North,323917,7367402.92,22.74,10.36,1.68
+Manhattan,Times Sq/Theatre District,217378,6689254.79,30.77,10.28,1.69
+Manhattan,Midtown East,230123,6089368.55,26.46,11.34,1.64
+Manhattan,Penn Station/Madison Sq West,223401,6086013.98,27.24,8.59,1.53
+Manhattan,Lincoln Square East,228102,5494122.36,24.09,6.53,1.68
+Manhattan,East Chelsea,183873,5215285.3,28.36,8.21,1.57
+Manhattan,Midtown North,190241,5136010.75,27.0,7.48,1.65
+Manhattan,East Village,196852,5064090.58,25.73,6.72,1.7

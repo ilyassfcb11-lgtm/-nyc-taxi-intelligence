@@ -1,0 +1,7 @@
+metric,value,display_value,category,accent
+Total Trips,7588819,7.59M,Volume,Blue
+Total Revenue,230215316.27,$230.2M,Revenue,Green
+Manhattan Trip Share,86.5,86.5%,Concentration,Teal
+Busiest Pickup Hour,18,18:00,Demand Timing,Gold
+Route Alerts,250,250,Risk,Red
+Zones Monitored,265,265,Coverage,Purple

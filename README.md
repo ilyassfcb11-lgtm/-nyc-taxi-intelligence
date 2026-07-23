@@ -40,6 +40,8 @@ The dashboard KPI definitions are documented in `docs/DASHBOARD_KPI_DICTIONARY.m
 
 The current Phase 3 handoff notes are documented in `docs/PHASE_3_WAKE_UP_NOTES.md`.
 
+Small Tableau-ready dashboard extracts are in `tableau/tableau_ready/`.
+
 ## Planned Workflow
 
 1. Download official NYC TLC Yellow Taxi data.
