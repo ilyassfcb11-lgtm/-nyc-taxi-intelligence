@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NYC Taxi Operations Command Center</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="shell">
+      <aside class="sidebar" aria-label="Dashboard navigation">
+        <div class="brand">
+          <div class="brand-mark">NYC</div>
+          <div>
+            <p class="eyebrow">Taxi Intelligence</p>
+            <h1>Operations Command Center</h1>
+          </div>
+        </div>
+
+        <nav class="nav-list">
+          <a class="active" href="#overview">Overview</a>
+          <a href="#priority">Priority</a>
+          <a href="#demand">Demand</a>
+          <a href="#routes">Routes</a>
+        </nav>
+
+        <section class="filter-panel" aria-label="Dashboard filters">
+          <label for="boroughFilter">Borough</label>
+          <select id="boroughFilter">
+            <option value="All">All boroughs</option>
+            <option value="Manhattan">Manhattan</option>
+            <option value="Queens">Queens</option>
+            <option value="Brooklyn">Brooklyn</option>
+            <option value="Bronx">Bronx</option>
+          </select>
+
+          <label for="sortMode">Rank by</label>
+          <select id="sortMode">
+            <option value="priority">Priority score</option>
+            <option value="trips">Pickup trips</option>
+            <option value="revenue">Pickup revenue</option>
+          </select>
+        </section>
+      </aside>
+
+      <main class="content" id="overview">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">April and May 2026 modeled trips</p>
+            <h2>NYC Taxi Operations Command Center</h2>
+          </div>
+          <div class="status-pill">
+            <span></span>
+            BigQuery marts connected
+          </div>
+        </header>
+
+        <section class="kpi-grid" aria-label="Executive KPIs">
+          <article class="kpi-card accent-blue">
+            <span>Total Trips</span>
+            <strong>7.59M</strong>
+            <small>Cleaned modeled trips</small>
+          </article>
+          <article class="kpi-card accent-green">
+            <span>Total Revenue</span>
+            <strong>$230.2M</strong>
+            <small>Modeled pickup revenue</small>
+          </article>
+          <article class="kpi-card accent-gold">
+            <span>Zones Monitored</span>
+            <strong>265</strong>
+            <small>TLC taxi zones</small>
+          </article>
+          <article class="kpi-card accent-red">
+            <span>Top Priority Score</span>
+            <strong>78.5</strong>
+            <small>Upper East Side South</small>
+          </article>
+        </section>
+
+        <section class="dashboard-grid">
+          <article class="panel panel-large" id="priority">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">Fleet allocation</p>
+                <h3>Top Priority Zones</h3>
+              </div>
+              <span class="panel-tag">Composite score</span>
+            </div>
+            <div id="priorityBars" class="bar-list"></div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">Geography</p>
+                <h3>Trips by Borough</h3>
+              </div>
+            </div>
+            <div id="tripBars" class="bar-list compact"></div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">Revenue mix</p>
+                <h3>Revenue by Borough</h3>
+              </div>
+            </div>
+            <div id="revenueBars" class="bar-list compact"></div>
+          </article>
+
+          <article class="panel panel-wide" id="demand">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">Demand pattern</p>
+                <h3>Busiest Pickup Hours</h3>
+              </div>
+              <span class="panel-tag">Late afternoon peak</span>
+            </div>
+            <div id="hourlyBars" class="hour-grid"></div>
+          </article>
+
+          <article class="panel panel-wide" id="routes">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">Route operations</p>
+                <h3>High-Volume Low-Efficiency Alerts</h3>
+              </div>
+              <span class="panel-tag">250 routes flagged</span>
+            </div>
+            <div id="routeAlerts" class="route-list"></div>
+          </article>
+
+          <article class="panel insight-panel">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">Recommendation</p>
+                <h3>What To Do Next</h3>
+              </div>
+            </div>
+            <p>
+              Prioritize Manhattan coverage for volume, protect airport capacity for revenue,
+              and review flagged short urban routes where high demand does not translate into
+              strong efficiency.
+            </p>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

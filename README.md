@@ -30,6 +30,8 @@ Phase 3 has started with a Tableau dashboard plan in `docs/PHASE_3_TABLEAU_PLAN.
 
 The current Tableau dashboard build is documented in `tableau/BUILD_LOG.md`.
 
+The polished dashboard design preview is in `dashboard_preview/`.
+
 The first business findings are documented in `docs/BUSINESS_INSIGHTS.md`.
 
 ## Planned Workflow

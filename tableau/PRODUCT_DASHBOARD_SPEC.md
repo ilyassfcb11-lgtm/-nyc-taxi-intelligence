@@ -179,6 +179,7 @@ Built in Tableau:
 Saved project artifact:
 
 - `tableau/screenshots/executive_overview_work_in_progress.png`
+- `dashboard_preview/` product dashboard design target
 
 Still needed:
 
