@@ -52,6 +52,15 @@ Defines the dashboard KPIs in business language.
 
 The Tableau workbook itself was not published or uploaded.
 
+I attempted to improve the open Tableau workbook directly overnight. Tableau Public's dashboard sizing and object controls were not reliable through automation, so I did not keep pushing risky UI changes. The workbook was left open and the accidental dashboard-size change was undone.
+
+What was completed instead:
+
+- a stronger dashboard preview
+- small Tableau-ready extracts
+- a detailed Tableau rebuild guide
+- a KPI dictionary
+
 The next Tableau step should be done together:
 
 ```text
@@ -63,9 +72,10 @@ Rebuild the Tableau dashboard using the polished preview and Tableau rebuild gui
 1. Open the polished dashboard preview.
 2. Open Tableau Public.
 3. Set Tableau dashboard size to desktop, ideally `1200 x 900`.
-4. Build KPI cards first.
-5. Rebuild the charts one by one using `tableau/TABLEAU_REBUILD_GUIDE.md`.
-6. Save or publish only when the user is ready.
+4. Connect to the small files in `tableau/tableau_ready/`.
+5. Build KPI cards first.
+6. Rebuild the charts one by one using `tableau/TABLEAU_REBUILD_GUIDE.md`.
+7. Save or publish only when the user is ready.
 
 ## Interview Talking Point
 

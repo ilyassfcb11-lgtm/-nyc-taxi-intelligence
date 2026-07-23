@@ -142,6 +142,22 @@ tableau/TABLEAU_REBUILD_GUIDE.md
 
 This guide documents the recommended worksheets, fields, filters, colors, and business meaning for the polished Tableau dashboard.
 
+## Tableau-Ready Extracts
+
+Small, focused CSV extracts were created in:
+
+```text
+tableau/tableau_ready/
+```
+
+These are designed to make the final Tableau rebuild faster than using the large full mart exports directly.
+
+## Automation Note
+
+The open Tableau Public workbook was not published or uploaded.
+
+Tableau Public's dashboard sizing and dashboard-object controls were not reliable through automated UI control, so risky in-app edits were stopped. The next native Tableau build should be done interactively using the polished preview and rebuild guide.
+
 ## Interview Explanation
 
 If asked what was built in Tableau:
