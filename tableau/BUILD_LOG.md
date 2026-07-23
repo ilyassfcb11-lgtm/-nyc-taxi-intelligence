@@ -132,6 +132,16 @@ This preview is more complete than the first Tableau draft. It includes:
 
 The next Tableau build should use this preview as the visual and business blueprint.
 
+## Tableau Rebuild Notes
+
+A detailed rebuild guide has been added:
+
+```text
+tableau/TABLEAU_REBUILD_GUIDE.md
+```
+
+This guide documents the recommended worksheets, fields, filters, colors, and business meaning for the polished Tableau dashboard.
+
 ## Interview Explanation
 
 If asked what was built in Tableau:

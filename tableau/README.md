@@ -15,6 +15,8 @@ The dashboard should use the BigQuery KPI mart tables documented in `docs/PHASE_
 
 The product dashboard design spec is documented in `tableau/PRODUCT_DASHBOARD_SPEC.md`.
 
+The Tableau rebuild guide is documented in `tableau/TABLEAU_REBUILD_GUIDE.md`.
+
 ## Current Dashboard Work
 
 Workbook name:

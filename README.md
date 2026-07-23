@@ -32,7 +32,11 @@ The current Tableau dashboard build is documented in `tableau/BUILD_LOG.md`.
 
 The polished dashboard design preview is in `dashboard_preview/`.
 
+The Tableau rebuild instructions are documented in `tableau/TABLEAU_REBUILD_GUIDE.md`.
+
 The first business findings are documented in `docs/BUSINESS_INSIGHTS.md`.
+
+The dashboard KPI definitions are documented in `docs/DASHBOARD_KPI_DICTIONARY.md`.
 
 ## Planned Workflow
 
