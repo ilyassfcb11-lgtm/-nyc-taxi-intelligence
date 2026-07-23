@@ -119,7 +119,7 @@ source ../.venv/bin/activate
 dbt test --profiles-dir .
 ```
 
-This checks saved data quality rules, such as not-null columns, unique IDs, and fact-to-dimension relationships.
+This checks saved data quality rules, such as not-null columns, unique IDs, fact-to-dimension relationships, and business rules for clean KPI reporting.
 
 ## Generate dbt Documentation
 

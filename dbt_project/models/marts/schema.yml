@@ -61,4 +61,5 @@ models:
           - not_null
       - name: fleet_allocation_priority_score
         description: Composite score for prioritizing fleet allocation by zone.
-
+        tests:
+          - not_null

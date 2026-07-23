@@ -212,7 +212,7 @@ dbt created these BigQuery model tables:
 
 This confirms the transformation layer is now reproducible through dbt.
 
-The dbt tests succeeded:
+The first dbt tests succeeded:
 
 ```text
 dbt test --profiles-dir .
@@ -225,6 +225,12 @@ The tests checked important quality rules, including:
 - required columns are not null
 - IDs are unique where expected
 - pickup and dropoff location IDs in `fact_trips` exist in `dim_zone`
+
+Phase 5 later expanded this suite to 45 passing tests with additional business-rule checks. See:
+
+```text
+docs/DATA_QUALITY.md
+```
 
 dbt documentation generation succeeded:
 

@@ -74,7 +74,7 @@ Deliverable:
 
 Target: 3 to 4 days.
 
-Status: started.
+Status: complete for MVP.
 
 Deliverable:
 
