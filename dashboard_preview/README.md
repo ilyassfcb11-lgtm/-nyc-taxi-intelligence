@@ -32,6 +32,24 @@ The numbers come from the BigQuery mart exports in:
 tableau/exports/
 ```
 
+## Current Polish Pass
+
+The preview was tightened into a more executive dashboard layout:
+
+- compact KPI row
+- operating signal ribbon
+- clearer stakeholder decision cards
+- improved spacing, shadows, and typography
+- responsive desktop and mobile layout fixes
+- visible quality gate showing 45 passing dbt tests
+
+Saved screenshots:
+
+```text
+tableau/screenshots/dashboard_preview_phase3_polish_desktop.png
+tableau/screenshots/dashboard_preview_phase3_polish_mobile.png
+```
+
 ## Design Purpose
 
 The preview is intentionally more polished than the first Tableau draft.

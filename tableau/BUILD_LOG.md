@@ -169,6 +169,33 @@ tableau/screenshots/executive_dashboard_preview_render_large.png
 
 The HTML preview now includes static chart fallback markup, so dashboard sections appear even in renderers that do not run JavaScript.
 
+## Phase 3 Preview Polish
+
+The browser dashboard preview was polished into a tighter executive operations layout.
+
+Changes:
+
+- shortened the hero copy
+- added an operating signal ribbon
+- changed the status badge to show `45 dbt tests passed`
+- tightened typography and card spacing
+- improved desktop layout density
+- fixed mobile horizontal overflow caused by long dashboard labels
+
+Responsive validation:
+
+```text
+Desktop 1440px: no horizontal overflow
+Mobile 390px: no horizontal overflow
+```
+
+Saved screenshots:
+
+```text
+tableau/screenshots/dashboard_preview_phase3_polish_desktop.png
+tableau/screenshots/dashboard_preview_phase3_polish_mobile.png
+```
+
 ## Interview Explanation
 
 If asked what was built in Tableau:

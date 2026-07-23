@@ -188,6 +188,8 @@ Saved project artifact:
 
 - `tableau/screenshots/executive_overview_work_in_progress.png`
 - `dashboard_preview/` product dashboard design target
+- `tableau/screenshots/dashboard_preview_phase3_polish_desktop.png`
+- `tableau/screenshots/dashboard_preview_phase3_polish_mobile.png`
 
 Still needed:
 
@@ -200,5 +202,5 @@ Still needed:
 Current status:
 
 ```text
-The first Tableau dashboard is a working draft. The HTML preview now defines the stronger product-dashboard target: executive KPIs, stakeholder decisions, demand timing, revenue efficiency, route risk, and fleet allocation priority. The next Tableau work should rebuild the Tableau layout to match this target as closely as Tableau allows.
+The first Tableau dashboard is a working draft. The HTML preview now defines the stronger product-dashboard target: executive KPIs, stakeholder decisions, operating signals, demand timing, revenue efficiency, route risk, and fleet allocation priority. The next Tableau work should rebuild the Tableau layout to match this target as closely as Tableau allows.
 ```
