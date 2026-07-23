@@ -143,15 +143,120 @@ The first install attempt failed because Python could not verify a GitHub certif
 
 ## Current Status
 
-dbt project files have been created and dbt has been installed, but dbt has not been connected to BigQuery or run yet.
+dbt project files have been created and dbt has been installed.
+
+A local profile was created at:
+
+```text
+dbt_project/profiles.yml
+```
+
+That file is ignored by Git because dbt profiles are local machine configuration.
+
+Local dbt validation succeeded:
+
+```text
+dbt parse
+dbt ls
+```
+
+dbt found:
+
+```text
+9 models
+39 data tests
+2 raw sources
+```
+
+The model/test definitions are valid.
+
+One dbt warning was fixed in:
+
+```text
+dbt_project/models/core/schema.yml
+```
+
+The relationship tests now use dbt's newer `arguments:` syntax.
+
+The BigQuery connection check succeeded:
+
+```text
+dbt debug --profiles-dir .
+Connection test: OK connection ok
+All checks passed!
+```
+
+This confirms dbt can authenticate with Google Cloud and connect to the BigQuery project.
+
+The dbt pipeline run succeeded:
+
+```text
+dbt run --profiles-dir .
+Completed successfully
+PASS=9 WARN=0 ERROR=0 SKIP=0 TOTAL=9
+```
+
+dbt created these BigQuery model tables:
+
+| Layer | Model | Rows |
+| --- | --- | ---: |
+| staging | `stg_trips` | 7.6m |
+| staging | `stg_zones` | 265 |
+| core | `dim_date` | 61 |
+| core | `dim_zone` | 265 |
+| core | `fact_trips` | 7.6m |
+| marts | `mart_hourly_demand` | 233.4k |
+| marts | `mart_operational_kpis` | 265 |
+| marts | `mart_revenue_efficiency` | 233.4k |
+| marts | `mart_route_analysis` | 45.4k |
+
+This confirms the transformation layer is now reproducible through dbt.
+
+The dbt tests succeeded:
+
+```text
+dbt test --profiles-dir .
+Completed successfully
+PASS=39 WARN=0 ERROR=0 SKIP=0 TOTAL=39
+```
+
+The tests checked important quality rules, including:
+
+- required columns are not null
+- IDs are unique where expected
+- pickup and dropoff location IDs in `fact_trips` exist in `dim_zone`
+
+dbt documentation generation succeeded:
+
+```text
+dbt docs generate --profiles-dir .
+Catalog written to dbt_project/target/catalog.json
+```
+
+This created the local dbt documentation files, including model metadata, column metadata, tests, sources, and lineage information.
+
+The dbt documentation site was opened locally:
+
+```text
+dbt docs serve --profiles-dir . --port 8081 --no-browser
+Serving docs at 8081
+http://localhost:8081
+```
 
 Next steps:
 
-1. Create a local dbt profile.
-2. Run `dbt debug`.
-3. Run `dbt run`.
-4. Run `dbt test`.
-5. Generate dbt documentation.
+1. Review the dbt documentation site and lineage graph.
+
+Commands:
+
+```bash
+cd "/Users/ilyass/Documents/Taxi project Codex./dbt_project"
+source ../.venv/bin/activate
+dbt debug --profiles-dir .
+dbt run --profiles-dir .
+dbt test --profiles-dir .
+dbt docs generate --profiles-dir .
+```
 
 ## Interview Answer
 

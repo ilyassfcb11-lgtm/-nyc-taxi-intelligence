@@ -62,6 +62,8 @@ Deliverable:
 
 Target: 5 to 7 days.
 
+Status: complete.
+
 Deliverable:
 
 - Staging models.
@@ -71,6 +73,8 @@ Deliverable:
 ## Phase 5: Testing and Data Quality
 
 Target: 3 to 4 days.
+
+Status: started.
 
 Deliverable:
 

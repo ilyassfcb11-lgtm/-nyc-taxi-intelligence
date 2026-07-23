@@ -96,3 +96,44 @@ It creates or replaces these raw tables:
 raw_taxi_trips
 raw_zone_lookup
 ```
+
+## Run The dbt Pipeline
+
+```bash
+cd "/Users/ilyass/Documents/Taxi project Codex./dbt_project"
+source ../.venv/bin/activate
+dbt run --profiles-dir .
+```
+
+This rebuilds the clean dbt tables in BigQuery:
+
+```text
+raw tables -> staging models -> core models -> mart models
+```
+
+## Test The dbt Pipeline
+
+```bash
+cd "/Users/ilyass/Documents/Taxi project Codex./dbt_project"
+source ../.venv/bin/activate
+dbt test --profiles-dir .
+```
+
+This checks saved data quality rules, such as not-null columns, unique IDs, and fact-to-dimension relationships.
+
+## Generate dbt Documentation
+
+```bash
+cd "/Users/ilyass/Documents/Taxi project Codex./dbt_project"
+source ../.venv/bin/activate
+dbt docs generate --profiles-dir .
+dbt docs serve --profiles-dir . --port 8081 --no-browser
+```
+
+This creates and opens the local dbt documentation website.
+
+After running the serve command, open:
+
+```text
+http://localhost:8081
+```

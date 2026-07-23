@@ -6,9 +6,9 @@ The goal is to turn raw taxi trip records into trusted business-ready tables, op
 
 ## Current Phase
 
-Phase 3: visualization.
+Phase 4: dbt modeling and data quality.
 
-The current phase uses the KPI mart tables to build Tableau dashboards and business recommendations.
+The current phase turns the manually built BigQuery transformation layer into a reproducible dbt project with automated tests and generated documentation.
 
 Phase 0 is complete: the repository, local Python environment, Google Cloud project, BigQuery dataset, Git checkpoint, and GitHub remote are ready.
 
@@ -16,7 +16,7 @@ Phase 1 is complete: the MVP source files have been downloaded locally, loaded i
 
 Phase 2 is complete: the project now has cleaned staging tables, fact and dimension tables, KPI definitions, and KPI mart tables.
 
-Phase 4 has started: the dbt project structure and initial dbt models have been created.
+Phase 4 is complete: dbt is connected to BigQuery, all 9 dbt models build successfully, all 39 dbt tests pass, and dbt documentation has been generated.
 
 Phase 2 cleaning status: staging tables have been created in BigQuery.
 
@@ -45,6 +45,8 @@ The current Phase 3 handoff notes are documented in `docs/PHASE_3_WAKE_UP_NOTES.
 Small Tableau-ready dashboard extracts are in `tableau/tableau_ready/`.
 
 The Phase 4 dbt setup is documented in `docs/PHASE_4_DBT_SETUP.md`.
+
+The Tableau dashboard work remains in progress and is documented in the Tableau files.
 
 ## Planned Workflow
 
@@ -104,3 +106,13 @@ The first Phase 2 KPI mart created:
 - `nyc-taxi-project-502819.nyc_taxi_ops.mart_operational_kpis`
 
 The mart result is documented in `docs/MART_LOG.md`.
+
+## Current dbt Tables
+
+The dbt run created separate BigQuery datasets for the transformation layers:
+
+- `nyc-taxi-project-502819.nyc_taxi_ops_staging`
+- `nyc-taxi-project-502819.nyc_taxi_ops_core`
+- `nyc-taxi-project-502819.nyc_taxi_ops_marts`
+
+The dbt pipeline builds 9 models and currently passes 39 data tests.

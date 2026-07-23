@@ -59,9 +59,11 @@ and:
 
 So instead of manually remembering the order, dbt builds the dependency graph.
 
-## Next Step
+## Current Status
 
-After dbt is installed and connected to BigQuery, run:
+dbt is installed, connected to BigQuery, and working.
+
+Completed commands:
 
 ```text
 dbt debug
@@ -70,3 +72,10 @@ dbt test
 dbt docs generate
 ```
 
+Current result:
+
+```text
+9 models built
+39 tests passed
+dbt docs generated
+```

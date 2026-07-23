@@ -4,6 +4,10 @@ __pycache__/
 *.py[cod]
 .env
 .env.*
+dbt_project/profiles.yml
+dbt_project/.user.yml
+dbt_project/logs/
+dbt_project/target/
 data/raw/
 data/processed/
 *.parquet
