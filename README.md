@@ -2,27 +2,32 @@
 
 [![Project CI](https://github.com/ilyassfcb11-lgtm/nyc-taxi-intelligence/actions/workflows/ci.yml/badge.svg)](https://github.com/ilyassfcb11-lgtm/nyc-taxi-intelligence/actions/workflows/ci.yml)
 
-End-to-end analytics engineering project using NYC Yellow Taxi trip data. The project ingests official TLC data, loads it into BigQuery, transforms it with dbt, validates the modeled data with automated tests, and presents the results through an operations dashboard concept.
+I built this project to practice the full workflow behind a business intelligence dashboard: getting raw data, loading it into a warehouse, cleaning and modeling it with SQL/dbt, checking data quality, and turning the final tables into something a manager could actually use.
+
+The dataset is NYC Yellow Taxi trip data from the Taxi & Limousine Commission. The current version uses April and May 2026 and includes more than 7.9 million raw trips.
 
 ![Dashboard preview](tableau/screenshots/dashboard_preview_phase3_polish_desktop.png)
 
-## Project Highlights
+## What This Project Does
 
-- Loaded 7.9M+ raw Yellow Taxi trips into BigQuery.
-- Built a dbt transformation layer with staging, core, and mart models.
-- Created 9 dbt models across clean, dimensional, and dashboard-ready layers.
-- Added 45 passing dbt data quality tests.
-- Designed an executive BI dashboard for fleet allocation, demand, revenue, and route risk.
-- Added GitHub Actions CI to validate Python and dbt project structure on every push.
+- Downloads official NYC taxi source files.
+- Loads the raw trip and zone data into BigQuery.
+- Uses dbt to build cleaned staging tables, fact/dimension tables, and KPI marts.
+- Tests the modeled data with 45 dbt checks.
+- Exports Tableau-ready datasets.
+- Includes a dashboard preview focused on demand, revenue, route performance, and operating pressure.
+- Runs a GitHub Actions check whenever code is pushed.
 
-## Business Goal
+## Business Question
 
-The dashboard is designed for a fleet operations manager who needs to answer:
+I treated this like a fleet operations problem. If someone had to decide where to place taxis, which zones need attention, and which routes are underperforming, what tables and metrics would they need?
 
-- Where is taxi demand concentrated?
-- Which pickup zones should receive fleet priority?
-- Which zones and routes generate the strongest revenue?
-- Where do high-volume routes show low operational efficiency?
+The dashboard is built around four questions:
+
+- Where is demand highest?
+- Which zones generate the most pickup revenue?
+- Which hours have the strongest pickup volume?
+- Which high-volume routes have weaker revenue or efficiency?
 
 ## Tech Stack
 
@@ -38,7 +43,7 @@ The dashboard is designed for a fleet operations manager who needs to answer:
 ## Architecture
 
 ```text
-NYC TLC source files
+NYC TLC trip files
         |
         v
 Python ingestion
@@ -56,7 +61,7 @@ dbt core fact/dimension models
 dbt KPI mart models
         |
         v
-Dashboard-ready extracts and BI preview
+CSV extracts and dashboard preview
 ```
 
 More detail: [ARCHITECTURE.md](ARCHITECTURE.md)
@@ -69,11 +74,11 @@ dbt builds three modeling layers:
 | --- | --- | --- |
 | Staging | Clean and standardize raw source tables | `stg_trips`, `stg_zones` |
 | Core | Create reusable fact and dimension tables | `fact_trips`, `dim_zone`, `dim_date` |
-| Marts | Create dashboard-ready KPI tables | `mart_hourly_demand`, `mart_revenue_efficiency`, `mart_route_analysis`, `mart_operational_kpis` |
+| Marts | Create KPI tables for the dashboard | `mart_hourly_demand`, `mart_revenue_efficiency`, `mart_route_analysis`, `mart_operational_kpis` |
 
 ## Key Metrics
 
-Current MVP scope uses April and May 2026 Yellow Taxi records.
+Current scope uses April and May 2026 Yellow Taxi records.
 
 | Metric | Value |
 | --- | ---: |
@@ -97,9 +102,9 @@ Data quality details: [docs/DATA_QUALITY.md](docs/DATA_QUALITY.md)
 
 ## Dashboard
 
-The dashboard preview is built as a product-style BI concept before final Tableau publishing. It includes:
+The dashboard preview is an HTML/CSS/JS version of the BI layout I want to recreate in Tableau. It includes:
 
-- executive KPI cards
+- summary KPI cards
 - operating signal ribbon
 - top fleet priority zones
 - borough trip and revenue mix
@@ -107,7 +112,7 @@ The dashboard preview is built as a product-style BI concept before final Tablea
 - hourly pickup demand
 - route alerts and top revenue routes
 
-Open locally in a browser:
+Open this file locally in a browser:
 
 ```text
 dashboard_preview/index.html

@@ -1,11 +1,11 @@
 # Architecture
 
-This project follows a modern analytics engineering flow: raw data is preserved in BigQuery, transformations are managed in dbt, and dashboard-ready marts are separated from the raw source tables.
+This project separates the work into clear layers: raw source data, cleaned staging models, reusable analytical tables, KPI marts, and dashboard outputs. I kept the raw BigQuery tables separate so the original taxi records stay available even when the SQL modeling changes.
 
 ## System Flow
 
 ```text
-Official NYC TLC files
+Official NYC TLC trip files
         |
         v
 Python ingestion scripts
@@ -23,7 +23,7 @@ dbt core fact and dimension models
 dbt KPI marts
         |
         v
-Dashboard-ready extracts and BI preview
+CSV extracts and dashboard preview
 ```
 
 ## Source Layer
@@ -54,13 +54,13 @@ nyc_taxi_ops.raw_taxi_trips
 nyc_taxi_ops.raw_zone_lookup
 ```
 
-## Warehouse Layer
+## BigQuery Layer
 
 BigQuery stores both raw and modeled data. Raw tables are preserved so transformation logic can be changed without losing the original source records.
 
 ## Transformation Layer
 
-dbt is the production transformation layer.
+dbt manages the SQL transformations.
 
 ```text
 dbt_project/models/staging/
@@ -93,7 +93,7 @@ dim_date
 
 ### Marts
 
-Mart models create dashboard-ready KPI tables.
+Mart models create KPI tables used by the dashboard.
 
 Examples:
 
@@ -123,7 +123,7 @@ Current status:
 
 ## Visualization Layer
 
-The visualization layer uses Tableau-ready extracts and a polished dashboard preview:
+The visualization layer uses Tableau-ready extracts and a dashboard preview:
 
 ```text
 tableau/tableau_ready/
