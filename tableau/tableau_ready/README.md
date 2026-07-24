@@ -1,6 +1,6 @@
 # Tableau-Ready Extracts
 
-This folder contains small CSV files prepared specifically for rebuilding the polished Tableau dashboard.
+This folder contains small CSV files prepared for rebuilding the dashboard in Tableau.
 
 These are not raw taxi files. They are small, dashboard-focused extracts created from the BigQuery mart exports.
 
@@ -8,7 +8,7 @@ Use these files in Tableau when rebuilding:
 
 | File | Use |
 | --- | --- |
-| `kpi_cards.csv` | Executive KPI cards |
+| `kpi_cards.csv` | KPI cards |
 | `top_priority_zones_top12.csv` | Fleet priority ranking |
 | `borough_trip_revenue_mix.csv` | Trips vs revenue by borough |
 | `hourly_demand_summary.csv` | Pickup volume by hour |
@@ -24,7 +24,7 @@ Why these files exist:
 The full mart exports are useful, but they can make Tableau slower and harder to work with. These focused extracts make the final dashboard faster to build and easier to explain.
 ```
 
-Interview explanation:
+Short explanation:
 
 ```text
 I prepared small Tableau-specific extracts from the BigQuery marts so the dashboard layer works at the correct grain. This keeps Tableau focused on visualization instead of forcing it to perform heavy transformations.

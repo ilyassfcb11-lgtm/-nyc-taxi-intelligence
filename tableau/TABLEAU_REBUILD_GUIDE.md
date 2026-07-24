@@ -1,6 +1,6 @@
 # Tableau Rebuild Guide
 
-This guide explains how to rebuild the Tableau dashboard so it matches the polished product-dashboard preview.
+This guide explains how to rebuild the Tableau dashboard using the browser preview as a reference.
 
 Use the preview as the visual target:
 
@@ -10,7 +10,7 @@ dashboard_preview/index.html
 
 ## Goal
 
-Build a stakeholder-ready Tableau dashboard named:
+Build a Tableau dashboard named:
 
 ```text
 NYC Taxi Operations Command Center
@@ -23,7 +23,7 @@ The dashboard should answer:
 - where revenue is strongest
 - where operational pressure exists
 - which routes need review
-- what stakeholders should do next
+- what a manager should look at next
 
 ## Recommended Tableau Dashboard Size
 
@@ -36,7 +36,7 @@ Use a desktop dashboard size:
 Why:
 
 ```text
-The current Tableau draft looks cramped because it uses a small phone-sized range. A desktop canvas gives space for KPI cards, charts, filters, and stakeholder notes.
+The current Tableau draft looks cramped because it uses a small phone-sized range. A desktop canvas gives space for KPI cards, charts, filters, and notes.
 ```
 
 ## Tableau Data Sources

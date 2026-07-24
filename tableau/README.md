@@ -1,17 +1,17 @@
 # Tableau Artifacts
 
-This folder is for Tableau-related project files.
+This folder contains the Tableau-related files for the dashboard part of the project.
 
 Use it for:
 
 - Tableau workbook notes.
 - Dashboard screenshots.
 - Tableau exports.
-- Final dashboard documentation.
+- Dashboard documentation.
 
 Do not put raw taxi data files here.
 
-The dashboard should use the BigQuery KPI mart tables documented in `docs/build_logs/PHASE_3_TABLEAU_PLAN.md`.
+The dashboard uses BigQuery/dbt KPI tables documented in `docs/build_logs/PHASE_3_TABLEAU_PLAN.md`.
 
 The product dashboard design spec is documented in `tableau/PRODUCT_DASHBOARD_SPEC.md`.
 
@@ -33,11 +33,11 @@ NYC Taxi Operations Command Center
 
 Current work-in-progress screenshot:
 
-![Executive Overview work in progress](screenshots/executive_overview_work_in_progress.png)
+![Tableau dashboard work in progress](screenshots/executive_overview_work_in_progress.png)
 
-Polished dashboard render:
+Dashboard preview render:
 
-![Executive dashboard preview render](screenshots/executive_dashboard_preview_render.png)
+![Dashboard preview render](screenshots/executive_dashboard_preview_render.png)
 
 Built so far:
 

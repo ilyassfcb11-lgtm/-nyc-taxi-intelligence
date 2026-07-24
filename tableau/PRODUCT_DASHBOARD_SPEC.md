@@ -166,10 +166,10 @@ The dashboard should tell this story:
 
 ## Interview Explanation
 
-If someone asks why this is a dashboard and not just charts:
+If someone asks why this is a dashboard and not just separate charts:
 
 ```text
-I designed the visualization layer as an operations command center. The dashboard starts with KPI cards for fast executive context, then uses ranked priority views and borough-level comparisons to support fleet allocation decisions. The goal is not only to show charts, but to help a manager decide where vehicles should be prioritized.
+I designed the dashboard around decisions, not just charts. It starts with KPI cards, then shows priority zones, borough comparisons, demand timing, revenue efficiency, and route alerts. The goal is to help a manager decide where vehicles may need more attention.
 ```
 
 ## Current Build Status
@@ -202,5 +202,5 @@ Still needed:
 Current status:
 
 ```text
-The first Tableau dashboard is a working draft. The HTML preview now defines the stronger product-dashboard target: executive KPIs, stakeholder decisions, operating signals, demand timing, revenue efficiency, route risk, and fleet allocation priority. The next Tableau work should rebuild the Tableau layout to match this target as closely as Tableau allows.
+The first Tableau dashboard is a working draft. The HTML preview defines the layout target for KPI cards, operating signals, demand timing, revenue efficiency, route risk, and fleet allocation priority. The next Tableau work should rebuild the Tableau layout to match this target as closely as Tableau allows.
 ```
