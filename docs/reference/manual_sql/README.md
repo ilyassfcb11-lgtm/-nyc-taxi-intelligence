@@ -2,7 +2,7 @@
 
 This folder contains the manual SQL prototype that was created before the transformation layer was migrated into dbt.
 
-The dbt project is now the production transformation layer:
+The dbt project is now the main transformation layer:
 
 ```text
 dbt_project/

@@ -2,9 +2,9 @@
 
 Phase 2 is complete.
 
-This phase transformed the project from raw loaded data into clean, modeled, KPI-ready BigQuery tables.
+This phase turned the raw BigQuery tables into cleaned, modeled tables for KPI work.
 
-## What We Built
+## What I Built
 
 The project now has four analytics layers:
 
@@ -26,7 +26,7 @@ Tables:
 
 Why this matters:
 
-Raw tables are the original copy. If a cleaning rule is wrong, we can go back to raw and rebuild.
+Raw tables are the original copy. If a cleaning rule is wrong, I can go back to raw and rebuild.
 
 ## Layer 2: Staging Tables
 
@@ -39,7 +39,7 @@ Tables:
 
 What changed:
 
-- Removed trips outside the MVP date range.
+- Removed trips outside the April and May 2026 date range.
 - Removed trips with non-positive duration.
 - Removed trips with non-positive distance.
 - Removed trips with non-positive total amount.
@@ -55,7 +55,7 @@ rows removed:    333,257 rows
 
 ## Layer 3: Fact And Dimension Tables
 
-The core model turns cleaned data into business-friendly analytics tables.
+The core model turns cleaned data into analysis tables.
 
 Tables:
 
@@ -71,11 +71,11 @@ Meaning:
 
 Why this matters:
 
-This is data modeling. Instead of putting every field in one giant table, we separate business events from descriptive context. This makes analysis easier, cleaner, and closer to how professional analytics systems are designed.
+This is data modeling. Instead of putting every field in one giant table, I separated trip events from descriptive context. This makes the data easier to analyze and explain.
 
 ## Layer 4: KPI Mart Tables
 
-KPI marts are dashboard-ready summary tables.
+KPI marts are summary tables for dashboard analysis.
 
 Tables:
 
@@ -86,7 +86,7 @@ Tables:
 
 Why this matters:
 
-Tableau should not scan millions of raw trip rows for every dashboard view. KPI marts make dashboards faster, cheaper, and easier to explain.
+Tableau should not scan millions of raw trip rows for every dashboard view. KPI marts make the dashboard faster, cheaper, and easier to explain.
 
 ## KPI Categories Defined
 
@@ -124,7 +124,7 @@ Mart validation:
 - `mart_route_analysis` has 45,409 rows.
 - `mart_operational_kpis` has 265 rows.
 
-## What We Learned
+## What I Learned
 
 Ingestion only puts data into BigQuery.
 
@@ -134,7 +134,7 @@ Cleaning removes records that would damage analysis.
 
 Modeling organizes cleaned data into fact and dimension tables.
 
-KPI marts summarize modeled data into tables that are ready for dashboards.
+KPI marts summarize modeled data into tables that are easier to use in dashboards.
 
 All of these steps are part of ELT:
 
@@ -144,7 +144,7 @@ Load: loaded files into BigQuery raw tables
 Transform: cleaned, modeled, and summarized data in BigQuery
 ```
 
-## Interview Questions And Answers
+## Questions I Can Answer
 
 ### 1. What is data cleaning in this project?
 
@@ -156,7 +156,7 @@ Data modeling means organizing data into tables that match the business question
 
 ### 3. Why not use the raw table directly in Tableau?
 
-The raw table is too detailed and includes records that are not ready for analysis. Using KPI mart tables makes Tableau faster, cheaper in BigQuery, and easier for business users to understand.
+The raw table is too detailed and includes records that are not ready for analysis. Using KPI mart tables makes Tableau faster, cheaper in BigQuery, and easier to understand.
 
 ### 4. What is a KPI mart?
 
@@ -164,18 +164,18 @@ A KPI mart is a summary table built for a specific type of analysis. For example
 
 ### 5. What is the difference between staging and a mart?
 
-Staging is the first cleaned layer and is still close to the original data. A mart is a business-ready summary layer designed for a dashboard or decision-making use case.
+Staging is the first cleaned layer and is still close to the original data. A mart is a summary layer designed for a dashboard or a specific analysis question.
 
-### 6. How did you control BigQuery cost?
+### 6. How I controlled BigQuery cost
 
 I loaded raw data once, created partitioned and clustered tables, and built smaller mart tables for dashboard analysis. This avoids repeatedly scanning the largest raw table.
 
 ### 7. What part of ELT is Phase 2?
 
-Phase 2 is the Transform part of ELT. The data was already extracted and loaded in Phase 1. In Phase 2, SQL transformed it into cleaned, modeled, KPI-ready tables.
+Phase 2 is the Transform part of ELT. The data was already extracted and loaded in Phase 1. In Phase 2, SQL transformed it into cleaned, modeled KPI tables.
 
 ## Next Phase
 
 Phase 3 is visualization.
 
-The next step is to plan and build Tableau dashboards using the KPI mart tables, then write business insights and recommendations.
+The next step is to build dashboard views from the KPI mart tables and write the first business findings.

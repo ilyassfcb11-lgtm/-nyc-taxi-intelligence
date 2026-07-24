@@ -1,6 +1,6 @@
 # Roadmap
 
-This roadmap is a target, not a guarantee. If a phase takes longer than expected, the project should reduce scope before adding unnecessary complexity.
+This roadmap tracks how I built the project. It is a guide, not a guarantee.
 
 ## Phase 0: Setup
 
@@ -35,7 +35,7 @@ Deliverable:
 - Fact and dimension tables.
 - KPI definitions.
 - Cost-conscious summary tables for analysis.
-- Phase 2 summary and interview notes.
+- Phase 2 summary notes.
 
 ## Phase 3: Visualization
 
@@ -46,8 +46,8 @@ Status: started.
 Deliverable:
 
 - Tableau dashboard pages.
-- First visible portfolio-ready version.
-- Initial business insights and recommendations.
+- First shareable dashboard version.
+- Initial business findings.
 - Tableau plan and workbook notes.
 
 ## Checkpoint 1
@@ -56,7 +56,7 @@ Target: about 2 weeks.
 
 Deliverable:
 
-- A working end-to-end MVP from raw data to dashboard.
+- A working first version from raw data to dashboard.
 
 ## Phase 4: dbt Modeling
 
@@ -74,7 +74,7 @@ Deliverable:
 
 Target: 3 to 4 days.
 
-Status: complete for MVP.
+Status: complete for the current version.
 
 Deliverable:
 
@@ -92,7 +92,7 @@ Deliverable:
 
 - GitHub Actions workflow.
 - Final documentation.
-- Interview preparation notes.
+- Project explanation notes.
 
 ## Checkpoint 2
 
@@ -100,4 +100,4 @@ Target: 4 to 6 weeks, with 6 to 8 weeks acceptable if needed.
 
 Deliverable:
 
-- A professional portfolio project ready for job applications and interviews.
+- A project that is ready to share in job applications and interviews.

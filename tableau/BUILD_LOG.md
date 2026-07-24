@@ -4,7 +4,7 @@ This file documents the Tableau dashboard build step by step.
 
 ## Dashboard Goal
 
-The Tableau workbook should become a portfolio-ready operations dashboard:
+The Tableau workbook is the native BI dashboard version of the project:
 
 ```text
 NYC Taxi Operations Command Center
@@ -104,16 +104,16 @@ This is not final yet.
 Next Tableau tasks:
 
 - Add KPI cards for total revenue, zones monitored, and top priority score.
-- Improve spacing so the dashboard feels like a product interface.
+- Improve spacing and colors.
 - Add filters for borough and service zone.
 - Build the Demand Patterns page.
 - Build the Revenue and Efficiency page.
 - Build the Route Performance page.
-- Publish only after the dashboard is polished and ready to be public.
+- Publish only after the dashboard is ready to share.
 
 ## Dashboard Design Target
 
-The polished design target is now in:
+The dashboard layout reference is now in:
 
 ```text
 dashboard_preview/
@@ -121,8 +121,8 @@ dashboard_preview/
 
 This preview is more complete than the first Tableau draft. It includes:
 
-- six executive KPI cards
-- stakeholder decision summary
+- KPI cards
+- short decision summary
 - fleet priority ranking
 - borough trip and revenue mix
 - capacity pressure hotspots
@@ -130,7 +130,7 @@ This preview is more complete than the first Tableau draft. It includes:
 - revenue efficiency views
 - route alert list
 
-The next Tableau build should use this preview as the visual and business blueprint.
+The next Tableau build should use this preview as the layout reference.
 
 ## Tableau Rebuild Notes
 
@@ -140,7 +140,7 @@ A detailed rebuild guide has been added:
 tableau/TABLEAU_REBUILD_GUIDE.md
 ```
 
-This guide documents the recommended worksheets, fields, filters, colors, and business meaning for the polished Tableau dashboard.
+This guide documents the recommended worksheets, fields, filters, colors, and chart meanings for the Tableau dashboard.
 
 ## Tableau-Ready Extracts
 
@@ -150,17 +150,17 @@ Small, focused CSV extracts were created in:
 tableau/tableau_ready/
 ```
 
-These are designed to make the final Tableau rebuild faster than using the large full mart exports directly.
+These are designed to make the Tableau rebuild faster than using the large full mart exports directly.
 
 ## Automation Note
 
 The open Tableau Public workbook was not published or uploaded.
 
-Tableau Public's dashboard sizing and dashboard-object controls were not reliable through automated UI control, so risky in-app edits were stopped. The next native Tableau build should be done interactively using the polished preview and rebuild guide.
+Tableau Public's dashboard sizing and dashboard-object controls were not reliable through automated UI control, so risky in-app edits were stopped. The next native Tableau build should be done interactively using the preview and rebuild guide.
 
 ## Rendered Dashboard Asset
 
-A rendered image of the polished dashboard preview was saved for presentation and Tableau image-object use:
+A rendered image of the dashboard preview was saved for presentation and Tableau image-object use:
 
 ```text
 tableau/screenshots/executive_dashboard_preview_render.png
@@ -169,9 +169,9 @@ tableau/screenshots/executive_dashboard_preview_render_large.png
 
 The HTML preview now includes static chart fallback markup, so dashboard sections appear even in renderers that do not run JavaScript.
 
-## Phase 3 Preview Polish
+## Phase 3 Preview Update
 
-The browser dashboard preview was polished into a tighter executive operations layout.
+The browser dashboard preview was tightened into a clearer operations layout.
 
 Changes:
 
@@ -196,10 +196,10 @@ tableau/screenshots/dashboard_preview_phase3_polish_desktop.png
 tableau/screenshots/dashboard_preview_phase3_polish_mobile.png
 ```
 
-## Interview Explanation
+## How I Explain It
 
 If asked what was built in Tableau:
 
 ```text
-I built the visualization layer on top of KPI mart tables exported from BigQuery. The first dashboard is an executive operations overview with priority zones, borough-level demand and revenue, operational imbalance, and a total-trip KPI card. The dashboard is designed to support fleet allocation decisions rather than simply display raw charts.
+I built the visualization layer on top of KPI mart tables exported from BigQuery. The first Tableau dashboard shows priority zones, borough-level demand and revenue, operational imbalance, and a total-trip KPI card. The dashboard is meant to support fleet allocation decisions instead of only showing raw charts.
 ```

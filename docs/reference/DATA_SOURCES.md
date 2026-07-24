@@ -1,8 +1,8 @@
 # Data Sources
 
-This file documents the official source files for Phase 1 ingestion.
+This file documents the official source files used for ingestion.
 
-The goal of Phase 1 is to load raw official NYC TLC data into BigQuery. We are not cleaning, modeling, or analyzing yet.
+The ingestion step loads raw official NYC TLC data into BigQuery. Cleaning, modeling, and analysis happen later.
 
 ## Official Source Website
 
@@ -14,16 +14,16 @@ https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page
 
 The TLC page publishes monthly trip record files. The files are provided in Parquet format, which is commonly used for large analytics datasets.
 
-## MVP Scope
+## Current Scope
 
 For the first ingestion version, use Yellow Taxi data only.
 
-Selected MVP files:
+Selected files:
 
 | File | Purpose |
 | --- | --- |
-| `yellow_tripdata_2026-04.parquet` | First Yellow Taxi trip month for the MVP |
-| `yellow_tripdata_2026-05.parquet` | Second Yellow Taxi trip month for the MVP |
+| `yellow_tripdata_2026-04.parquet` | First Yellow Taxi trip month |
+| `yellow_tripdata_2026-05.parquet` | Second Yellow Taxi trip month |
 | `taxi_zone_lookup.csv` | Lookup table for pickup and dropoff zone names |
 
 ## Direct Source URLs
@@ -52,13 +52,13 @@ The zone lookup file is required because the trip files contain location IDs, no
 
 Yellow Taxi is a good first scope because it has rich trip, fare, distance, pickup, and dropoff fields.
 
-Starting with one taxi type keeps the pipeline simpler while we learn the ingestion and BigQuery workflow.
+Starting with one taxi type keeps the pipeline easier to inspect while I build the ingestion and BigQuery workflow.
 
-Green Taxi, For-Hire Vehicle, and High Volume For-Hire Vehicle data are out of scope for the MVP.
+Green Taxi, For-Hire Vehicle, and High Volume For-Hire Vehicle data are out of scope for this version.
 
 ## Cost Control
 
-The MVP uses only two months of data to keep BigQuery usage low.
+The current version uses two months of data to keep BigQuery usage low.
 
 Cost-control rules:
 
@@ -69,7 +69,7 @@ Cost-control rules:
 
 ## Future Expansion
 
-After the MVP works, the project can expand to a full 12-month period.
+After this version works, the project can expand to a full 12-month period.
 
 Recommended final expansion:
 
@@ -79,7 +79,7 @@ through
 yellow_tripdata_2025-12.parquet
 ```
 
-Using a full calendar year is better for seasonality and stronger portfolio analysis, but it should come after the pipeline is working reliably.
+Using a full calendar year is better for seasonality, but it should come after the pipeline is working reliably.
 
 ## Data Dictionary
 
@@ -89,7 +89,7 @@ Official Yellow Taxi data dictionary:
 https://www.nyc.gov/assets/tlc/downloads/pdf/data_dictionary_trip_records_yellow.pdf
 ```
 
-Important fields expected for the MVP:
+Important fields used by this version:
 
 - `tpep_pickup_datetime`
 - `tpep_dropoff_datetime`
@@ -105,4 +105,3 @@ Important fields expected for the MVP:
 - `congestion_surcharge`
 - `airport_fee`
 - `cbd_congestion_fee`
-

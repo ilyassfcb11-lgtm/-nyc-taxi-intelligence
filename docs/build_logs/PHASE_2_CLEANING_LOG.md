@@ -1,6 +1,6 @@
 # Phase 2 Cleaning Log
 
-This file records cleaning and staging work for Phase 2.
+This file records the cleaning and staging work.
 
 ## Run 1: Create Staging Tables
 
@@ -46,7 +46,7 @@ Rows removed by first cleaning rules:
 333,257
 ```
 
-Rows were removed because the first staging layer keeps only trips that meet the Phase 2 cleaning rules documented in `docs/CLEANING_RULES.md`.
+Rows were removed because the staging layer keeps only trips that meet the cleaning rules documented in `docs/CLEANING_RULES.md`.
 
 ## Validation Results
 
@@ -62,7 +62,7 @@ Rows were removed because the first staging layer keeps only trips that meet the
 | Non-positive total amount rows | 0 |
 | Null average speed rows | 0 |
 
-## What This Means
+## Result
 
 The project now has a clean staging trip table that is safer for KPI development than the raw table.
 
@@ -73,4 +73,3 @@ The raw table is still preserved. The staging table is a cleaner analytical laye
 Creating `stg_trips` scanned about 1.17 GB once.
 
 The new table is partitioned by `pickup_date` and clustered by pickup/dropoff location ID to make later filtered queries more efficient.
-

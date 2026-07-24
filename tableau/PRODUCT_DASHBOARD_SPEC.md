@@ -9,7 +9,7 @@ Where is demand concentrated?
 Which zones need fleet attention?
 Where is revenue strong?
 Where is the system under pressure?
-What action should we take next?
+What action should a manager look at next?
 ```
 
 ## Dashboard Name
@@ -62,7 +62,7 @@ Main visual:
   Top Priority Zones
 
 Supporting visuals:
-  Stakeholder decision summary
+  Short decision summary
   Pickup Trips by Borough
   Pickup Revenue by Borough
   Pressure hotspots
@@ -164,7 +164,7 @@ The dashboard should tell this story:
 3. Demand volume and revenue are related, but not identical.
 4. Fleet decisions should use a composite score, not trip count alone.
 
-## Interview Explanation
+## How I Explain It
 
 If someone asks why this is a dashboard and not just separate charts:
 

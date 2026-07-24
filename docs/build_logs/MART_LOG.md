@@ -57,13 +57,13 @@ pickup date + pickup hour + pickup zone
 
 The highest hourly-zone trip counts in the preview were concentrated in Manhattan zones such as East Village and Midtown Center.
 
-This is not a final business conclusion yet. It is an early sign that the demand mart is producing interpretable operational outputs.
+This is not a final business conclusion yet. It is an early sign that the demand mart is producing useful outputs.
 
 ## Cost Note
 
 The dry run estimated the mart query would process about 243 MB.
 
-This mart is much smaller and more dashboard-friendly than querying the raw trip table directly.
+This mart is much smaller than querying the raw trip table directly.
 
 ## Run 2: Revenue Efficiency Mart
 
@@ -132,7 +132,7 @@ This is still an early preview, not a final recommendation.
 
 The dry run estimated the mart query would process about 364 MB.
 
-This mart is designed for Tableau revenue and efficiency analysis without scanning trip-level fact rows repeatedly.
+This mart supports Tableau revenue and efficiency analysis without scanning trip-level fact rows repeatedly.
 
 ## Run 3: Route Analysis Mart
 
@@ -198,7 +198,7 @@ This suggests the route mart is producing realistic urban mobility patterns.
 
 The dry run estimated the mart query would process about 304 MB.
 
-This route mart is much smaller than trip-level data and is better suited for route analysis dashboards.
+This route mart is much smaller than trip-level data and is better for route analysis.
 
 ## Run 4: Operational KPI Mart
 
@@ -235,7 +235,7 @@ taxi zone
 | --- | --- |
 | `zone_utilization_proxy` | Pickup trips per active pickup hour |
 | `peak_load_factor` | Peak hourly pickup trips compared with average hourly pickup trips |
-| `capacity_pressure_proxy` | Same as peak load factor for the MVP |
+| `capacity_pressure_proxy` | Same as peak load factor for the current version |
 | `operational_imbalance_score` | Pickup/dropoff imbalance by zone |
 | `zone_efficiency_score` | Zone revenue efficiency index from revenue per mile and minute |
 | `fleet_allocation_priority_score` | Weighted 0-100 score for fleet attention |
@@ -267,10 +267,10 @@ Component scores are normalized and capped to reduce distortion from low-volume 
 
 The highest fleet allocation priority scores were concentrated in major Manhattan zones such as Upper East Side South, Midtown Center, and Upper East Side North, with JFK Airport also ranking highly.
 
-This matches operational intuition: these areas combine high demand, strong utilization, or important movement imbalance.
+This matches the expected pattern: these areas combine high demand, strong utilization, or important movement imbalance.
 
 ## Cost Note
 
 The dry run estimated the mart query would process about 425 MB.
 
-This zone-level mart gives Tableau a compact operations-focused table instead of scanning trip-level data repeatedly.
+This zone-level mart gives Tableau a compact table instead of scanning trip-level data repeatedly.

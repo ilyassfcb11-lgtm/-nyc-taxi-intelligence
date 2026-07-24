@@ -1,6 +1,6 @@
 # Core Model Log
 
-This file records Phase 2 core modeling work.
+This file records the core modeling work.
 
 ## Run 1: Create Fact And Dimension Tables
 
@@ -32,7 +32,7 @@ nyc-taxi-project-502819.nyc_taxi_ops
 
 Staging tables are the first cleaned version of raw data.
 
-Core model tables organize the cleaned data into a business-friendly analytics model:
+Core model tables organize the cleaned data into an analysis-friendly model:
 
 - `fact_trips` stores trip events and numeric measures
 - `dim_zone` stores zone context
@@ -62,4 +62,3 @@ Zone join validation:
 Creating `fact_trips` scanned the staged trips table once.
 
 Future KPI tables should query `fact_trips`, `dim_zone`, and `dim_date` instead of raw tables.
-

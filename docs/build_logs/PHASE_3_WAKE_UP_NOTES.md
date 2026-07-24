@@ -6,18 +6,18 @@ This note summarizes the overnight Phase 3 work.
 
 The original Tableau draft looked cramped and plain because it used Tableau default formatting and a small dashboard canvas.
 
-To fix the direction, the project now has a polished BI dashboard preview:
+To fix the direction, I created a browser dashboard preview:
 
 ```text
 dashboard_preview/index.html
 ```
 
-This preview is not the final Tableau workbook. It is the design and business blueprint for the final Tableau dashboard.
+This preview is not the final Tableau workbook. It is a layout reference for the Tableau dashboard.
 
 ## What The New Dashboard Preview Includes
 
-- Executive KPI cards
-- Stakeholder decision summary
+- KPI cards
+- short decision summary
 - Fleet priority zone ranking
 - Borough trips vs revenue comparison
 - Capacity pressure hotspots
@@ -26,7 +26,7 @@ This preview is not the final Tableau workbook. It is the design and business bl
 - Highest revenue per trip zones
 - High-volume low-efficiency route alerts
 - Top revenue routes
-- Stakeholder recommendation panel
+- recommendation panel
 
 ## New Documentation Added
 
@@ -34,7 +34,7 @@ This preview is not the final Tableau workbook. It is the design and business bl
 tableau/TABLEAU_REBUILD_GUIDE.md
 ```
 
-Explains exactly how to rebuild the polished Tableau version:
+Explains how to rebuild the Tableau version:
 
 - which data source to use
 - which fields go into each worksheet
@@ -56,21 +56,21 @@ I attempted to improve the open Tableau workbook directly overnight. Tableau Pub
 
 What was completed instead:
 
-- a stronger dashboard preview
+- a clearer dashboard preview
 - small Tableau-ready extracts
 - a detailed Tableau rebuild guide
 - a KPI dictionary
-- rendered dashboard images that can be used as Tableau image assets or portfolio screenshots
+- rendered dashboard images that can be used as Tableau image assets or screenshots
 
 The next Tableau step should be done together:
 
 ```text
-Rebuild the Tableau dashboard using the polished preview and Tableau rebuild guide.
+Rebuild the Tableau dashboard using the browser preview and Tableau rebuild guide.
 ```
 
 ## Next Session Plan
 
-1. Open the polished dashboard preview.
+1. Open the dashboard preview.
 2. Open Tableau Public.
 3. Set Tableau dashboard size to desktop, ideally `1200 x 900`.
 4. Connect to the small files in `tableau/tableau_ready/`.
@@ -85,8 +85,8 @@ tableau/screenshots/executive_dashboard_preview_render.png
 tableau/screenshots/executive_dashboard_preview_render_large.png
 ```
 
-## Interview Talking Point
+## How I Explain It
 
 ```text
-The first Tableau draft proved that the mart data worked. I then created a polished BI dashboard blueprint with stakeholder-focused KPIs, operational recommendations, and clear sections for demand, revenue, fleet allocation, and route risk. This mirrors a real BI workflow: first validate the data, then design the dashboard for decision-making.
+The first Tableau draft proved that the mart data worked. I then created a browser dashboard preview to make the layout clearer before rebuilding it in Tableau. The dashboard focuses on demand, revenue, fleet allocation, and route risk.
 ```

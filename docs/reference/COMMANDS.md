@@ -2,7 +2,7 @@
 
 This file keeps the common project commands in one place.
 
-You do not need to memorize these commands. The goal is to understand what each one does and reuse them when needed.
+I use this as a quick reference so I do not have to remember every command from memory.
 
 ## Move Into The Project Folder
 
@@ -42,7 +42,7 @@ This shows which files are new, changed, or ready to commit.
 
 ```bash
 git add .
-git commit -m "Create Phase 0 project setup"
+git commit -m "Save project setup"
 ```
 
 This saves a checkpoint in the project history.
@@ -62,11 +62,11 @@ gcloud auth login
 gcloud auth application-default login
 ```
 
-These commands open a browser so you can log in to your own Google account.
+These commands open a browser for Google Cloud login.
 
 Credentials are handled by Google Cloud in your browser or local CLI session.
 
-## Download MVP Source Data
+## Download Source Data
 
 ```bash
 source .venv/bin/activate
@@ -119,7 +119,7 @@ source ../.venv/bin/activate
 dbt test --profiles-dir .
 ```
 
-This checks saved data quality rules, such as not-null columns, unique IDs, fact-to-dimension relationships, and business rules for clean KPI reporting.
+This checks saved data quality rules, such as not-null columns, unique IDs, fact-to-dimension relationships, and business rules for KPI reporting.
 
 ## Generate dbt Documentation
 
@@ -146,6 +146,6 @@ The project has a GitHub Actions workflow in:
 .github/workflows/ci.yml
 ```
 
-You do not run this manually most of the time.
+This usually does not need to be run manually.
 
 It runs automatically when code is pushed to GitHub.

@@ -440,7 +440,7 @@ Remove:
 - extra Tableau headers
 - raw tables as main visuals
 - tiny scrollbars when possible
-- repeated labels that do not help stakeholders
+- repeated labels that do not help the reader
 
 Add:
 
@@ -449,10 +449,10 @@ Add:
 - short business language
 - readable number formatting
 
-## Interview Explanation
+## How I Explain It
 
 If asked how the Tableau dashboard was designed:
 
 ```text
-I designed the Tableau layer as a stakeholder operations dashboard, not a chart dump. The dashboard starts with executive KPIs, then moves into fleet priority, borough demand and revenue mix, demand timing, revenue efficiency, and route alerts. The layout is based on business decisions: where to position vehicles, where revenue is strongest, and which routes need operational review.
+I designed the Tableau layer around decisions instead of separate charts. The dashboard starts with KPI cards, then moves into fleet priority, borough demand and revenue mix, demand timing, revenue efficiency, and route alerts. The layout is based on practical questions: where to position vehicles, where revenue is strongest, and which routes need review.
 ```

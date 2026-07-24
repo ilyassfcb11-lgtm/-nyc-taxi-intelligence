@@ -1,12 +1,12 @@
 # CI/CD
 
-This document explains the first CI/CD setup for the project.
+This document explains the GitHub Actions check I added for the project.
 
 ## What CI/CD Means Here
 
 CI/CD means GitHub automatically checks the project when code is pushed.
 
-For this analytics project, the first CI/CD version is focused on validation, not cloud deployment.
+For this project, the current workflow checks the code and dbt project structure. It does not deploy anything.
 
 Current workflow:
 
@@ -47,7 +47,7 @@ pull request to main
 
 ## What This Does Not Do Yet
 
-The first CI workflow does not run live BigQuery jobs.
+The current CI workflow does not run live BigQuery jobs.
 
 It does not run:
 
@@ -58,9 +58,9 @@ dbt test
 
 Reason:
 
-Those commands need Google Cloud credentials inside GitHub Actions. For the first public version, the safer approach is to validate the project structure without storing cloud credentials.
+Those commands need Google Cloud credentials inside GitHub Actions. For this public version, I kept the workflow credential-free and only validate the project structure.
 
-## Future Production Upgrade
+## Possible Upgrade
 
 A more advanced version could use GitHub Secrets for Google Cloud authentication.
 
@@ -79,9 +79,9 @@ Future automation could also include:
 - alerts if dbt tests fail
 - dashboard refresh workflow
 
-## Interview Answer
+## How I Explain It
 
-If asked how CI/CD is handled:
+If someone asks how CI/CD is handled:
 
 ```text
 I added a GitHub Actions workflow that runs on pushes and pull requests. The workflow installs dependencies, checks the Python ingestion scripts, and validates the dbt project structure with dbt parse and dbt ls. I kept the first CI version credential-free for safety, and documented how it could be extended later with GitHub Secrets to run dbt build against BigQuery.

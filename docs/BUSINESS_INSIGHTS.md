@@ -1,10 +1,10 @@
 # Business Insights
 
-This document summarizes the first business findings from the BigQuery marts and Tableau export files.
+This document summarizes the first findings from the BigQuery marts and Tableau export files.
 
-## Executive Summary
+## Summary
 
-The NYC taxi system in this project is heavily concentrated in Manhattan by trip volume, but airport zones in Queens generate very strong revenue. The dashboard should therefore not recommend fleet allocation from trip count alone. It should combine demand, revenue, efficiency, and operational imbalance.
+In this data, trip volume is heavily concentrated in Manhattan, but airport zones in Queens generate a larger share of revenue than their trip count suggests. That is why the dashboard looks at demand, revenue, efficiency, and zone pressure instead of using trip count alone.
 
 ## Key Metrics
 
@@ -19,7 +19,7 @@ The NYC taxi system in this project is heavily concentrated in Manhattan by trip
 
 Manhattan produced 6,563,944 pickup trips, or about 86.5% of the modeled trip volume.
 
-Why this matters:
+Why I included this:
 
 ```text
 Fleet availability must be strongest in Manhattan because that is where most pickup activity happens.
@@ -29,7 +29,7 @@ Fleet availability must be strongest in Manhattan because that is where most pic
 
 Queens produced 656,540 pickup trips, or about 8.7% of trips, but generated about $44.97M in revenue, or 19.5% of total revenue.
 
-Why this matters:
+Why I included this:
 
 ```text
 Airport trips can produce more revenue per trip, so a fleet strategy based only on trip count would undervalue Queens.
@@ -47,7 +47,7 @@ The highest fleet allocation priority zones include:
 | 4 | JFK Airport | Queens | 66.78 |
 | 5 | Midtown East | Manhattan | 64.61 |
 
-Why this matters:
+Why I included this:
 
 ```text
 The dashboard should recommend both dense Manhattan zones and high-value airport zones.
@@ -65,7 +65,7 @@ The busiest pickup hours are:
 | 15 | 458,713 |
 | 14 | 446,902 |
 
-Why this matters:
+Why I included this:
 
 ```text
 Fleet managers should monitor late afternoon and evening vehicle availability closely.
@@ -85,16 +85,16 @@ Example flagged routes include:
 | Yorkville East -> Upper East Side South | 9,247 |
 | Upper East Side South -> Times Sq/Theatre District | 6,843 |
 
-Why this matters:
+Why I included this:
 
 ```text
-The project goes beyond simple demand reporting and identifies routes that may need operational review.
+This adds a route-level view instead of only showing demand by zone.
 ```
 
-## Interview Answer
+## How I Explain It
 
-If asked what insights the project found:
+If someone asks what the analysis found:
 
 ```text
-The analysis showed that Manhattan dominates trip volume, but Queens airport zones contribute a much larger share of revenue than their trip share. The busiest demand periods are late afternoon and evening, and the route mart identifies high-volume routes with lower efficiency. Because of that, the final dashboard uses multiple KPI marts instead of a single chart, so fleet decisions can balance demand, revenue, and operational pressure.
+The analysis showed that Manhattan dominates trip volume, while Queens airport zones contribute a larger share of revenue than their trip share. The busiest demand periods are late afternoon and evening. I also built a route mart to flag high-volume routes with weaker efficiency. That is why the dashboard uses several KPI tables instead of one chart.
 ```

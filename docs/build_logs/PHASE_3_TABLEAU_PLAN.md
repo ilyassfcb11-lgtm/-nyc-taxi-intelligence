@@ -2,7 +2,7 @@
 
 Phase 3 turns the BigQuery KPI marts into a Tableau dashboard.
 
-The goal is not just to make charts. The goal is to tell a clear operations story:
+The goal is to build a dashboard that answers a few practical operations questions:
 
 ```text
 Where is taxi demand highest?
@@ -29,18 +29,18 @@ Tables to use:
 - `mart_route_analysis`
 - `mart_operational_kpis`
 
-## Why We Use The Mart Tables
+## Why I Use The Mart Tables
 
 The raw table has millions of rows and is too detailed for dashboard work.
 
-The mart tables are already summarized for business questions. This makes Tableau:
+The mart tables are already summarized for the dashboard questions. This makes Tableau:
 
 - easier to build
 - faster to use
 - cheaper in BigQuery
-- easier to explain in interviews
+- easier to explain
 
-## Dashboard Page 1: Executive Overview
+## Dashboard Page 1: Overview
 
 Business question:
 
@@ -240,14 +240,14 @@ Build the workbook in this order:
 1. Connect Tableau to BigQuery.
 2. Add the four mart tables as data sources.
 3. Build one simple worksheet from `mart_operational_kpis`.
-4. Build the Executive Overview dashboard first.
+4. Build the overview dashboard first.
 5. Add Demand Patterns.
 6. Add Revenue And Efficiency.
 7. Add Route Analysis.
 8. Add Fleet Allocation.
 9. Write 3 to 5 business insights.
 
-## Beginner Explanation
+## Plain-English Notes
 
 A worksheet is one chart.
 
@@ -267,12 +267,12 @@ BigQuery mart table
   -> business insight
 ```
 
-## Interview Answer
+## How I Explain It
 
 If someone asks why Tableau uses mart tables instead of raw data:
 
 ```text
-I designed the dashboard on top of KPI mart tables instead of raw trip records. The marts are already cleaned, modeled, and summarized at the correct grain for each analysis. This improves dashboard performance, lowers BigQuery query cost, and reduces the risk of incorrect calculations in Tableau.
+I built the dashboard on top of KPI mart tables instead of raw trip records. The marts are already cleaned, modeled, and summarized at the right grain for each analysis. This improves dashboard performance, lowers BigQuery query cost, and reduces the risk of doing the same calculations differently in Tableau.
 ```
 
 ## Phase 3 Completion Criteria
@@ -282,4 +282,4 @@ Phase 3 is complete when the project has:
 - A Tableau workbook connected to the BigQuery mart tables.
 - Dashboard pages for demand, revenue, routes, and fleet allocation.
 - Screenshots or exports saved in the project.
-- Business insights documented in the README or a separate insight document.
+- Business findings documented in the README or a separate insight document.

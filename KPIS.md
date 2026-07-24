@@ -1,8 +1,8 @@
 # KPI Definitions
 
-This document defines the first operational KPIs for the NYC Taxi Operations Intelligence Platform.
+This document defines the KPIs I used for the taxi dashboard.
 
-These KPI definitions are business logic. The SQL mart tables will be built after the definitions are clear.
+These definitions are the business logic behind the SQL mart tables.
 
 ## KPI Design Principles
 
@@ -11,7 +11,7 @@ Good KPIs should be:
 - clearly defined
 - tied to a business question
 - calculated from trusted modeled tables
-- easy to explain in an interview
+- easy to explain
 - honest about limitations
 
 For this project, KPI SQL should use:
@@ -94,7 +94,7 @@ Helps identify hours that require extra operational attention.
 
 Limitations:
 
-The index depends on the comparison period. A two-month MVP may not capture seasonality.
+The index depends on the comparison period. Two months of data will not capture full seasonality.
 
 ### 4. Weekend Vs Weekday Demand Shift
 
@@ -436,7 +436,7 @@ Identifies places that are busy but operationally challenging.
 
 Why it matters:
 
-Useful for recommendations about fleet allocation, routing, or service strategy.
+Useful for deciding which zones or routes need a closer look.
 
 Limitations:
 
@@ -473,7 +473,7 @@ Limitations:
 
 This is a decision-support proxy, not an optimization model. It does not include real fleet supply, driver shifts, or wait times.
 
-The MVP implementation normalizes and caps component scores to reduce distortion from small-volume outlier zones.
+The current implementation normalizes and caps component scores to reduce distortion from small-volume outlier zones.
 
 ### 19. Zone Utilization Proxy
 
@@ -595,13 +595,13 @@ Values above 1 indicate routes that outperform the system average.
 
 Why it matters:
 
-Useful for identifying routes with strong business value.
+Useful for identifying routes with stronger revenue productivity.
 
 Limitations:
 
 Must be interpreted with route volume. A route with very few trips can have an unstable index.
 
-## MVP KPI Implementation Order
+## KPI Implementation Order
 
 The first KPI marts should be built in this order:
 

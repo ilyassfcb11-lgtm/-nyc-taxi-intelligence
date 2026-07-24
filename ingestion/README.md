@@ -20,11 +20,11 @@ Load official NYC TLC Yellow Taxi source files into BigQuery as raw tables.
 
 This layer does not clean the data, calculate KPIs, build dashboards, or run dbt.
 
-The goal is only to prove that we can reliably move official source data into the cloud warehouse.
+The goal is to move official source data into the cloud warehouse in a repeatable way.
 
-## MVP Files
+## Source Files
 
-The MVP uses:
+The current version uses:
 
 - `yellow_tripdata_2026-04.parquet`
 - `yellow_tripdata_2026-05.parquet`
@@ -39,7 +39,7 @@ The BigQuery raw tables are:
 - `raw_taxi_trips`
 - `raw_zone_lookup`
 
-Raw tables should stay close to the source data. We avoid changing meaning in the raw layer because later cleaning and modeling should be easy to inspect.
+Raw tables should stay close to the source data. I avoid changing meaning in the raw layer because later cleaning and modeling should be easy to inspect.
 
 ## Why This Matters
 
@@ -72,4 +72,4 @@ Run them one at a time.
 
 Loading files into BigQuery is not the same as repeatedly querying them.
 
-The main cost risks come later from scanning large tables many times with SQL or Tableau. For this MVP, we keep cost low by loading only two months first and creating summary tables before dashboarding.
+The main cost risks come later from scanning large tables many times with SQL or Tableau. For this version, I keep cost low by loading two months first and creating summary tables before dashboarding.

@@ -2,7 +2,7 @@
 
 This file records Phase 1 ingestion runs.
 
-## Run 1: MVP Raw Load
+## Run 1: Raw Load
 
 Status: complete.
 
@@ -29,7 +29,7 @@ Loaded raw tables:
 
 ## What This Means
 
-The MVP source files were successfully moved from the official NYC TLC source into BigQuery raw tables.
+The selected source files were successfully moved from the official NYC TLC source into BigQuery raw tables.
 
 This completes the core data engineering objective for Phase 1:
 
@@ -39,7 +39,7 @@ official source files -> local raw files -> BigQuery raw tables
 
 ## What This Does Not Mean Yet
 
-The raw tables are not cleaned, modeled, tested, or dashboard-ready yet.
+The raw tables are not cleaned, modeled, tested, or ready for dashboard use yet.
 
 Known next steps:
 
@@ -52,7 +52,7 @@ Known next steps:
 
 The raw trips table is about 1.1 GB logical size.
 
-This is manageable for the MVP, but repeated full-table SQL scans can add unnecessary BigQuery usage. Future Tableau dashboards should query smaller summary tables instead of this raw table.
+This is manageable for the current scope, but repeated full-table SQL scans can add unnecessary BigQuery usage. Tableau should query smaller summary tables instead of this raw table.
 
 ## Raw Validation Results
 
@@ -102,7 +102,7 @@ Zone lookup checks:
 
 ## Raw Data Caveats Found
 
-The raw taxi trip table contains a small number of pickup dates outside the intended April and May 2026 MVP window.
+The raw taxi trip table contains a small number of pickup dates outside the intended April and May 2026 window.
 
 The raw taxi trip table also contains records with non-positive distance, amount, or duration.
 

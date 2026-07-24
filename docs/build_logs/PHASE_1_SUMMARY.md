@@ -2,7 +2,7 @@
 
 Phase 1 focused on ingestion: moving official NYC TLC source files into BigQuery raw tables.
 
-## What We Built
+## What I Built
 
 - Documented the official source files in `docs/reference/DATA_SOURCES.md`.
 - Created an ingestion folder for Phase 1 code and notes.
@@ -27,7 +27,7 @@ BigQuery raw tables:
 | `raw_taxi_trips` | 7,922,076 | 1,112.45 MB |
 | `raw_zone_lookup` | 265 | 0.01 MB |
 
-## What We Learned
+## What I Found
 
 The source data loaded successfully, but the raw trip table contains normal raw-data issues:
 
@@ -38,7 +38,7 @@ The source data loaded successfully, but the raw trip table contains normal raw-
 
 These issues belong in Phase 2 cleaning logic, not in Phase 1 ingestion.
 
-## What Remains Next
+## Next Step
 
 Phase 2 will clean and transform the raw data.
 
@@ -48,9 +48,9 @@ Next technical goals:
 - filter invalid dates and impossible trip records
 - standardize important columns
 - join trips to taxi zones
-- prepare the first KPI-ready tables
+- prepare the first KPI tables
 
-## Interview Questions And Practice Answers
+## Questions I Can Answer
 
 ### 1. What was the goal of Phase 1?
 
@@ -60,7 +60,7 @@ The goal was to ingest official NYC TLC source files into BigQuery raw tables. I
 
 Ingestion means moving official source files into the analytics system. In this project, that means NYC TLC files were downloaded locally and then loaded into BigQuery raw tables.
 
-### 3. Why did you create raw tables instead of cleaning immediately?
+### 3. Why I created raw tables instead of cleaning immediately
 
 Raw tables preserve the source data as received. This makes the pipeline easier to debug because cleaning rules are separated from the original data load.
 
@@ -68,7 +68,7 @@ Raw tables preserve the source data as received. This makes the pipeline easier 
 
 Validation showed that both raw tables loaded successfully. The trip table has 7,922,076 rows and the zone lookup has 265 rows. It also revealed raw-data quality issues such as out-of-window dates and non-positive distance, amount, or duration.
 
-### 5. How did you control cost in Phase 1?
+### 5. How I controlled cost in Phase 1
 
 I started with only two months of Yellow Taxi data and avoided repeated broad raw-table queries. I also documented that Tableau should later use summary tables instead of directly scanning raw tables.
 
@@ -76,4 +76,4 @@ I started with only two months of Yellow Taxi data and avoided repeated broad ra
 
 Phase 1 is on scope.
 
-The MVP now has official raw data in BigQuery. The project should not expand to 12 months yet. The next best step is Phase 2 cleaning using the two-month MVP first.
+The current version now has official raw data in BigQuery. I kept the scope at two months until the cleaning and modeling layers were working.

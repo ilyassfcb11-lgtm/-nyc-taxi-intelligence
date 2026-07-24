@@ -1,6 +1,6 @@
 # dbt Project
 
-This folder contains the production dbt transformation layer for BigQuery.
+This folder contains the dbt transformation layer for BigQuery.
 
 dbt turns the SQL pipeline into organized models:
 
@@ -39,7 +39,7 @@ Creates fact and dimension tables.
 models/marts/
 ```
 
-Creates dashboard-ready KPI tables.
+Creates KPI tables for the dashboard.
 
 ## Dependency Management
 

@@ -2,11 +2,11 @@
 
 This project uses Google Cloud Platform for BigQuery.
 
-The project does not store Google credentials. Authentication happens through the user's browser or Google Cloud CLI session.
+The project does not store Google credentials. Authentication happens through the browser or the local Google Cloud CLI session.
 
 ## Current Goal
 
-Create or select one Google Cloud project for this portfolio project.
+Create or select one Google Cloud project for the taxi project.
 
 Status: complete.
 
@@ -42,19 +42,19 @@ Go to:
 https://console.cloud.google.com/bigquery
 ```
 
-If Google asks you to agree to terms, choose your country, accept the terms, and continue.
+If Google asks for account terms, complete that setup before creating the dataset.
 
 ## Step 2: Create A Project
 
-If you do not already have a project:
+Project setup steps:
 
 1. Click the project selector at the top of Google Cloud.
 2. Click New Project.
 3. Use the project name `NYC Taxi Operations Intelligence`.
-4. Select `No organization` unless your school account requires an organization.
+4. Select `No organization` unless the account requires an organization.
 5. Click Create.
 
-Google will create a unique project ID. Copy that project ID because we will use it in terminal commands.
+Google creates a unique project ID. That project ID is used in terminal commands.
 
 Example project ID:
 
@@ -62,15 +62,15 @@ Example project ID:
 nyc-taxi-ops-123456
 ```
 
-Your actual project ID will probably be different.
+The actual project ID will usually be different.
 
 ## Step 3: Cost Control
 
-For learning, use the BigQuery sandbox or free tier where possible.
+For learning and cost control, use the BigQuery sandbox or free tier where possible.
 
 According to Google Cloud documentation, BigQuery free usage includes 10 GiB of storage per month and 1 TiB of querying per month. The sandbox can be used without a billing account, but it has limitations such as table expiration and unsupported features.
 
-For this project, we control cost by:
+Cost is controlled by:
 
 - starting with only two months of taxi data
 - avoiding repeated full-table scans
@@ -80,7 +80,7 @@ For this project, we control cost by:
 
 ## Step 4: Set The Project In Terminal
 
-After you know your project ID, run:
+After the project ID is known, run:
 
 ```bash
 gcloud config set project YOUR_PROJECT_ID
@@ -102,11 +102,11 @@ Run:
 gcloud config list
 ```
 
-You should see a `project` value under `[core]`.
+The output should show a `project` value under `[core]`.
 
 ## Step 6: BigQuery Dataset
 
-After the project is selected, we will create a BigQuery dataset named:
+After the project is selected, create a BigQuery dataset named:
 
 ```text
 nyc_taxi_ops

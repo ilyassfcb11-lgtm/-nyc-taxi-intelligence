@@ -1,6 +1,6 @@
 # KPI Mart SQL
 
-KPI mart tables are business-ready summary tables.
+KPI mart tables are summary tables built for analysis and dashboard use.
 
 They are built from the core model layer:
 

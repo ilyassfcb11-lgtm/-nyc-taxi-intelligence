@@ -1,6 +1,6 @@
 # Data Quality
 
-This document explains how the project checks whether the taxi analytics tables are reliable enough for KPI reporting and dashboard use.
+This document explains the data checks I added before using the taxi tables for KPIs and dashboard work.
 
 ## Current Status
 
@@ -15,7 +15,7 @@ This means dbt ran 45 saved quality checks against BigQuery and none failed.
 
 ## What Is Being Tested
 
-The tests cover four main quality areas.
+The tests cover four areas.
 
 | Area | What It Checks | Why It Matters |
 | --- | --- | --- |
@@ -65,9 +65,9 @@ fact_trips.pickup_location_id exists in dim_zone.location_id
 fact_trips.dropoff_location_id exists in dim_zone.location_id
 ```
 
-Beginner explanation:
+Plain-English check:
 
-Every pickup or dropoff zone used in a trip must exist in the taxi zone lookup table. If a trip has a location ID that does not exist in `dim_zone`, route and borough analysis may break or become misleading.
+Every pickup or dropoff zone used in a trip must exist in the taxi zone lookup table. If a trip has a location ID that does not exist in `dim_zone`, route and borough analysis can break or become misleading.
 
 ## Business Rule Tests
 
@@ -77,13 +77,13 @@ Current custom tests:
 
 | Test File | Rule |
 | --- | --- |
-| `assert_stg_trips_cleaning_rules.sql` | Staging trips must stay inside the MVP date window and have valid trip metrics |
+| `assert_stg_trips_cleaning_rules.sql` | Staging trips must stay inside the current date window and have valid trip metrics |
 | `assert_fact_trips_positive_trip_metrics.sql` | Fact trips must have positive distance, amount, and duration |
 | `assert_mart_hourly_demand_positive.sql` | Hourly demand marts must have positive demand and revenue |
 | `assert_mart_revenue_efficiency_positive.sql` | Revenue efficiency marts must have positive trip, revenue, mile, and minute totals |
 | `assert_mart_operational_score_range.sql` | Fleet priority score must stay between 0 and 100 |
 
-These tests protect the business meaning of the dashboard, not just the database structure.
+These tests check the meaning of the dashboard numbers, not just the database structure.
 
 ## How To Run The Tests
 
@@ -121,7 +121,7 @@ A failed test is not always bad. Sometimes it reveals a real data issue that sho
 
 ## Current Limitations
 
-The current test suite is strong for an MVP, but it is not a complete production monitoring system yet.
+The current test suite is useful for this version of the project, but it is not a complete production monitoring system yet.
 
 Future improvements could include:
 
@@ -131,10 +131,10 @@ Future improvements could include:
 - anomaly checks for unusually high revenue or trip distance
 - scheduled alerts when a monthly pipeline run fails
 
-## Interview Answer
+## How I Explain It
 
-If asked how data quality is handled in this project:
+If someone asks how data quality is handled:
 
 ```text
-I use dbt tests to make data quality part of the pipeline. The tests check completeness, uniqueness, relationships between fact and dimension tables, and business rules such as positive trip distance, positive revenue, valid trip duration, and KPI score ranges. This means the pipeline does not only build tables; it also validates that the tables are reliable enough for dashboard reporting.
+I use dbt tests to make data quality part of the pipeline. The tests check completeness, uniqueness, relationships between fact and dimension tables, and business rules such as positive trip distance, positive revenue, valid trip duration, and KPI score ranges. The pipeline does not just build tables; it also checks that the tables are reliable enough to use in the dashboard.
 ```

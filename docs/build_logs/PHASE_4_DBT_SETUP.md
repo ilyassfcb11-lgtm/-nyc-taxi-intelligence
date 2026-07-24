@@ -1,12 +1,12 @@
 # Phase 4 dbt Setup
 
-Phase 4 starts the dbt transformation layer.
+This log records the dbt setup work.
 
 ## What dbt Means In This Project
 
 dbt is the framework that organizes the SQL transformation work.
 
-Before dbt, we had SQL files that manually created tables:
+Before dbt, I had SQL files that manually created tables:
 
 ```text
 sql/staging/
@@ -44,7 +44,7 @@ Important files:
 
 ## What Changed From Regular SQL
 
-In regular SQL, we wrote:
+In regular SQL, I wrote:
 
 ```sql
 CREATE OR REPLACE TABLE dataset.stg_trips AS
@@ -264,9 +264,9 @@ dbt test --profiles-dir .
 dbt docs generate --profiles-dir .
 ```
 
-## Interview Answer
+## How I Explain It
 
-If asked what dbt adds to the project:
+If someone asks what dbt adds to the project:
 
 ```text
 I first built the transformations manually in BigQuery to understand the data and business logic. Then I migrated the SQL into dbt models so the transformation layer became modular, documented, testable, and easier to maintain. dbt also gives lineage, so it is clear how raw tables flow into staging, core models, and KPI marts.

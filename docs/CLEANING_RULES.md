@@ -1,6 +1,6 @@
 # Cleaning Rules
 
-This document defines the first cleaning rules for Phase 2.
+This document defines the cleaning rules used before building the modeled taxi tables.
 
 The goal is to turn raw taxi trip records into a cleaner, more reliable table for KPI development.
 
@@ -10,16 +10,16 @@ Raw data should not be overwritten. Cleaning logic should create new tables whil
 
 Phase 1 validation showed that the raw trip table loaded successfully, but it contains normal raw-data issues:
 
-- a few pickup dates outside the intended April and May 2026 MVP window
+- a few pickup dates outside the intended April and May 2026 window
 - trips with non-positive distance
 - trips with non-positive total amount
 - trips with non-positive duration
 
 These issues can distort KPIs such as revenue per mile, average trip duration, route efficiency, and demand by hour.
 
-## MVP Cleaning Window
+## Cleaning Window
 
-For the MVP, keep only trips with pickup dates in:
+For the current version, keep only trips with pickup dates in:
 
 ```text
 2026-04-01 through 2026-05-31
@@ -27,7 +27,7 @@ For the MVP, keep only trips with pickup dates in:
 
 Reason:
 
-The MVP source files are April 2026 and May 2026 Yellow Taxi trip files. A few rows outside this range are raw-data outliers and should not be included in the first clean analysis layer.
+The source files are April 2026 and May 2026 Yellow Taxi trip files. A few rows outside this range are raw-data outliers and should not be included in the first clean analysis layer.
 
 ## Trip Validity Rules
 
@@ -66,7 +66,7 @@ The zone lookup table should keep:
 - `Zone`
 - `service_zone`
 
-No major cleaning is needed for the MVP because validation showed:
+No major cleaning is needed for the zone lookup file because validation showed:
 
 - 265 rows
 - 265 distinct location IDs
@@ -76,9 +76,9 @@ No major cleaning is needed for the MVP because validation showed:
 
 Column names may be standardized later for readability.
 
-## What We Are Not Doing Yet
+## What This Layer Does Not Do
 
-Phase 2 cleaning should not add advanced business KPIs too early.
+The cleaning layer should stay close to the raw data. It should not add advanced KPIs too early.
 
 Do not start with:
 
@@ -92,7 +92,7 @@ First, create a clean trip layer. Then build KPI queries on top of it.
 
 ## Expected First Clean Tables
 
-The first Phase 2 SQL outputs should be:
+The first clean SQL outputs are:
 
 | Table | Purpose |
 | --- | --- |
@@ -111,4 +111,3 @@ Later tables:
 Filtering invalid records improves KPI reliability, but it also removes some raw data.
 
 For transparency, the project should document how many rows are removed by cleaning rules.
-
