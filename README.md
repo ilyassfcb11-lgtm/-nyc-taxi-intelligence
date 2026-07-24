@@ -39,7 +39,7 @@ The dashboard is built around four questions:
 | Warehouse | Google BigQuery |
 | Transformation | SQL, dbt, dbt-bigquery |
 | Data Quality | dbt generic tests, custom dbt SQL tests |
-| Visualization | Tableau-ready CSV extracts, HTML/CSS/JS dashboard preview |
+| Visualization | Published HTML dashboard, Tableau-ready CSV extracts |
 | CI/CD | GitHub Actions |
 
 ## Architecture
@@ -104,7 +104,7 @@ Data quality details: [docs/DATA_QUALITY.md](docs/DATA_QUALITY.md)
 
 ## Dashboard
 
-The dashboard preview is an HTML/CSS/JS version of the BI layout I want to recreate in Tableau. It includes:
+The published dashboard is a browser-based BI preview built from the same KPI logic used for the Tableau-ready extracts. It includes:
 
 - summary KPI cards
 - operating signal ribbon
@@ -120,10 +120,12 @@ Open the live version:
 https://ilyassfcb11-lgtm.github.io/nyc-taxi-intelligence/
 ```
 
-Open this file locally in a browser:
+The source files for the published dashboard are:
 
 ```text
 dashboard_preview/index.html
+dashboard_preview/styles.css
+dashboard_preview/app.js
 ```
 
 Dashboard preview notes: [dashboard_preview/README.md](dashboard_preview/README.md)

@@ -1,14 +1,16 @@
 # Dashboard Preview
 
-This folder contains a browser version of the taxi dashboard.
+This folder contains the published browser dashboard.
 
-I used it to design the dashboard layout before rebuilding the same idea in Tableau. It is easier to control spacing, colors, and layout in HTML/CSS first, then use that as a reference for the Tableau version.
+I used this version to present the BI dashboard online. The Tableau folder still contains Tableau-ready extracts and screenshots, while this folder powers the public GitHub Pages dashboard.
 
 Live version:
 
 ```text
 https://ilyassfcb11-lgtm.github.io/nyc-taxi-intelligence/
 ```
+
+![Dashboard preview](../tableau/screenshots/dashboard_preview_phase3_polish_desktop.png)
 
 The preview includes:
 
