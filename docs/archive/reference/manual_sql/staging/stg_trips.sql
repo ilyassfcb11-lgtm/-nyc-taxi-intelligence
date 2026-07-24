@@ -3,7 +3,7 @@
 -- This query keeps the raw table unchanged and writes a new table:
 -- nyc-taxi-project-502819.nyc_taxi_ops.stg_trips
 --
--- Cleaning rules are documented in docs/CLEANING_RULES.md.
+-- Cleaning rules are documented in docs/archive/supporting/CLEANING_RULES.md.
 
 CREATE OR REPLACE TABLE `nyc-taxi-project-502819.nyc_taxi_ops.stg_trips`
 PARTITION BY pickup_date
@@ -50,4 +50,3 @@ WHERE DATE(tpep_pickup_datetime) BETWEEN DATE '2026-04-01' AND DATE '2026-05-31'
     AND total_amount > 0
     AND PULocationID IS NOT NULL
     AND DOLocationID IS NOT NULL;
-

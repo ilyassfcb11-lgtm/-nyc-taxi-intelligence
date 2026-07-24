@@ -118,7 +118,7 @@ Open this file locally in a browser:
 dashboard_preview/index.html
 ```
 
-Dashboard design notes: [tableau/PRODUCT_DASHBOARD_SPEC.md](tableau/PRODUCT_DASHBOARD_SPEC.md)
+Dashboard preview notes: [dashboard_preview/README.md](dashboard_preview/README.md)
 
 ## Repository Structure
 
@@ -127,8 +127,8 @@ Dashboard design notes: [tableau/PRODUCT_DASHBOARD_SPEC.md](tableau/PRODUCT_DASH
 ├── ingestion/              # Python download and BigQuery load scripts
 ├── dbt_project/            # dbt models, tests, sources, and project config
 ├── dashboard_preview/      # HTML/CSS/JS dashboard concept
-├── tableau/                # Tableau-ready extracts, screenshots, rebuild guide
-├── docs/                   # Data quality, CI/CD, business insights, build logs
+├── tableau/                # Tableau-ready extracts and screenshots
+├── docs/                   # Business insights, data quality, CI/CD, archive
 ├── data/                   # Local data folder placeholder; raw files are ignored
 ├── .github/workflows/      # GitHub Actions CI
 ├── ARCHITECTURE.md
@@ -192,4 +192,4 @@ CI/CD details: [docs/CI_CD.md](docs/CI_CD.md)
 - [Data quality](docs/DATA_QUALITY.md)
 - [CI/CD](docs/CI_CD.md)
 - [Business insights](docs/BUSINESS_INSIGHTS.md)
-- [Dashboard specification](tableau/PRODUCT_DASHBOARD_SPEC.md)
+- [Dashboard preview](dashboard_preview/README.md)

@@ -46,7 +46,7 @@ Rows removed by first cleaning rules:
 333,257
 ```
 
-Rows were removed because the staging layer keeps only trips that meet the cleaning rules documented in `docs/CLEANING_RULES.md`.
+Rows were removed because the staging layer keeps only trips that meet the cleaning rules documented in `docs/archive/supporting/CLEANING_RULES.md`.
 
 ## Validation Results
 

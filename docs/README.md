@@ -1,23 +1,15 @@
 # Documentation
 
-This folder contains supporting documentation for the NYC Taxi Intelligence project.
+This folder keeps the main supporting notes for the project.
 
-## Core Docs
+## Main Docs
 
 - [Business insights](BUSINESS_INSIGHTS.md)
 - [CI/CD](CI_CD.md)
-- [Cleaning rules](CLEANING_RULES.md)
-- [Dashboard KPI dictionary](DASHBOARD_KPI_DICTIONARY.md)
 - [Data quality](DATA_QUALITY.md)
 
-## Reference
+## Archive
 
-- [Command reference](reference/COMMANDS.md)
-- [Data sources](reference/DATA_SOURCES.md)
-- [Project brief](reference/PROJECT_BRIEF.md)
-- [Roadmap](reference/ROADMAP.md)
-- [Manual SQL prototype archive](reference/manual_sql/README.md)
+Longer setup notes, build logs, manual SQL prototypes, and detailed dashboard planning notes are in [archive/](archive/).
 
-## Build Logs
-
-Detailed implementation notes are archived in [build_logs/](build_logs/). These are useful for project history, but the root README is the main portfolio entry point.
+I kept them out of the main docs list so the repo is easier to scan.

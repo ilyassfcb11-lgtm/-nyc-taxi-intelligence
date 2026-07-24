@@ -30,7 +30,7 @@ The current version uses:
 - `yellow_tripdata_2026-05.parquet`
 - `taxi_zone_lookup.csv`
 
-These files are documented in `docs/reference/DATA_SOURCES.md`.
+These files are documented in `docs/archive/reference/DATA_SOURCES.md`.
 
 ## Raw Tables
 

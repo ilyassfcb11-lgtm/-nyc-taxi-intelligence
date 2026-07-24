@@ -4,7 +4,7 @@ Phase 1 focused on ingestion: moving official NYC TLC source files into BigQuery
 
 ## What I Built
 
-- Documented the official source files in `docs/reference/DATA_SOURCES.md`.
+- Documented the official source files in `docs/archive/reference/DATA_SOURCES.md`.
 - Created an ingestion folder for Phase 1 code and notes.
 - Built `ingestion/download_data.py` to download official TLC files.
 - Built `ingestion/load_to_bigquery.py` to load local raw files into BigQuery.

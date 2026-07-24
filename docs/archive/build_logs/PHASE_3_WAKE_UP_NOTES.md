@@ -31,7 +31,7 @@ This preview is not the final Tableau workbook. It is a layout reference for the
 ## New Documentation Added
 
 ```text
-tableau/TABLEAU_REBUILD_GUIDE.md
+docs/archive/tableau/TABLEAU_REBUILD_GUIDE.md
 ```
 
 Explains how to rebuild the Tableau version:
@@ -43,7 +43,7 @@ Explains how to rebuild the Tableau version:
 - what each visual means
 
 ```text
-docs/DASHBOARD_KPI_DICTIONARY.md
+docs/archive/supporting/DASHBOARD_KPI_DICTIONARY.md
 ```
 
 Defines the dashboard KPIs in business language.
@@ -75,7 +75,7 @@ Rebuild the Tableau dashboard using the browser preview and Tableau rebuild guid
 3. Set Tableau dashboard size to desktop, ideally `1200 x 900`.
 4. Connect to the small files in `tableau/tableau_ready/`.
 5. Build KPI cards first.
-6. Rebuild the charts one by one using `tableau/TABLEAU_REBUILD_GUIDE.md`.
+6. Rebuild the charts one by one using `docs/archive/tableau/TABLEAU_REBUILD_GUIDE.md`.
 7. Save or publish only when the user is ready.
 
 Useful rendered assets:

@@ -33,7 +33,7 @@ The project uses official NYC Taxi & Limousine Commission Yellow Taxi trip files
 Tracked source references are documented in:
 
 ```text
-docs/reference/DATA_SOURCES.md
+docs/archive/reference/DATA_SOURCES.md
 ```
 
 Raw downloaded data files are not committed to GitHub.

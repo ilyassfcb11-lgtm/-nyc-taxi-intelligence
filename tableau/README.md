@@ -11,11 +11,7 @@ Use it for:
 
 Do not put raw taxi data files here.
 
-The dashboard uses BigQuery/dbt KPI tables documented in `docs/build_logs/PHASE_3_TABLEAU_PLAN.md`.
-
-The product dashboard design spec is documented in `tableau/PRODUCT_DASHBOARD_SPEC.md`.
-
-The Tableau rebuild guide is documented in `tableau/TABLEAU_REBUILD_GUIDE.md`.
+Detailed Tableau planning notes are archived in `../docs/archive/tableau/`.
 
 ## Current Dashboard Work
 

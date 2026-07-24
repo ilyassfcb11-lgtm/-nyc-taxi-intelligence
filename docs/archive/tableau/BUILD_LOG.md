@@ -137,7 +137,7 @@ The next Tableau build should use this preview as the layout reference.
 A detailed rebuild guide has been added:
 
 ```text
-tableau/TABLEAU_REBUILD_GUIDE.md
+docs/archive/tableau/TABLEAU_REBUILD_GUIDE.md
 ```
 
 This guide documents the recommended worksheets, fields, filters, colors, and chart meanings for the Tableau dashboard.
