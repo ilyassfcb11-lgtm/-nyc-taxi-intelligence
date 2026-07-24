@@ -8,6 +8,8 @@ The dataset is NYC Yellow Taxi trip data from the Taxi & Limousine Commission. T
 
 ![Dashboard preview](tableau/screenshots/dashboard_preview_phase3_polish_desktop.png)
 
+Live dashboard: [ilyassfcb11-lgtm.github.io/nyc-taxi-intelligence](https://ilyassfcb11-lgtm.github.io/nyc-taxi-intelligence/)
+
 ## What This Project Does
 
 - Downloads official NYC taxi source files.
@@ -111,6 +113,12 @@ The dashboard preview is an HTML/CSS/JS version of the BI layout I want to recre
 - capacity pressure hotspots
 - hourly pickup demand
 - route alerts and top revenue routes
+
+Open the live version:
+
+```text
+https://ilyassfcb11-lgtm.github.io/nyc-taxi-intelligence/
+```
 
 Open this file locally in a browser:
 

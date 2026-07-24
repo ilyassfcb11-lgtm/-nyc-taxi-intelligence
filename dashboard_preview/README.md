@@ -4,6 +4,12 @@ This folder contains a browser version of the taxi dashboard.
 
 I used it to design the dashboard layout before rebuilding the same idea in Tableau. It is easier to control spacing, colors, and layout in HTML/CSS first, then use that as a reference for the Tableau version.
 
+Live version:
+
+```text
+https://ilyassfcb11-lgtm.github.io/nyc-taxi-intelligence/
+```
+
 The preview includes:
 
 - summary KPI cards
