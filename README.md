@@ -20,6 +20,20 @@ Live dashboard: [ilyassfcb11-lgtm.github.io/nyc-taxi-intelligence](https://ilyas
 - Includes a dashboard preview focused on demand, revenue, route performance, and operating pressure.
 - Runs a GitHub Actions check whenever code is pushed.
 
+## Skills Demonstrated
+
+- Python data ingestion
+- SQL transformation and KPI modeling
+- ELT pipeline design
+- BigQuery warehouse modeling
+- dbt models, tests, sources, and documentation
+- Data cleaning and validation
+- Fact and dimension modeling
+- Data marts for BI dashboards
+- Data quality testing
+- Git, GitHub, and GitHub Actions CI
+- Dashboard design and business intelligence storytelling
+
 ## Business Question
 
 I treated this like a fleet operations problem. If someone had to decide where to place taxis, which zones need attention, and which routes are underperforming, what tables and metrics would they need?
